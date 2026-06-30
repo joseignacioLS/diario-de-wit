@@ -15,12 +15,30 @@
     </header>
     <main>
         <h2>Partidas</h2>
-        <ul>
-            <li><a href="/el-truhan-errante/index.html">El Truhan Errante</a></li>
+        <ul id="games-list">
         </ul>
     </main>
     <footer></footer>
 </body>
-<script></script>
+<script>
+    const baseUrl = "https://joseignaciols.github.io/diario-de-wit"
+    const isProduction = window.location.hostname === "joseignaciols.github.io";
+    const games = [
+        {
+            title: "El Truhan Errante",
+            url: "/el-truhan-errante/"
+        }
+    ]
+    const gamesListElement = document.querySelector('#games-list');
+
+    games.forEach(game => {
+        const listItem = document.createElement('li');
+        const linkItem = document.createElement('a');
+        linkItem.href = isProduction ? baseUrl + game.url : game.url;
+        linkItem.textContent = game.title;
+        listItem.appendChild(linkItem);
+        gamesListElement?.appendChild(listItem);
+    });
+</script>
 
 </html>
