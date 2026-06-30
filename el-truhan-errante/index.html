@@ -79,6 +79,7 @@
         .toSorted((a, b) => b.number - a.number)
         .forEach(session => {
             const articleElement = document.createElement("article");
+            articleElement.classList.add("session");
             if (!session.title) {
                 return
             }
