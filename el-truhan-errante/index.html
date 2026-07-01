@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Truhan Errante</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="load.js" type="module" defer></script>
 </head>
 
-<body>
+<body class="with-aside">
     <header>
         <h1>El Truhan Errante</h1>
     </header>
+    <aside></aside>
     <main>
         <h2>
             Resumen
@@ -21,81 +23,9 @@
             Cornelio, junto a sus compañeros Rufus y Silvestre, que pongan a la tripulación del Truhan Errante de vuelta
             en altamar, consiguiendo una reparación... o quizás un nuevo barco.
         </p>
-        <h3>Sesiones</h3>
+        <h2>Sesiones</h2>
     </main>
     <footer></footer>
 </body>
-<script>
-    const sessions = [
-        {
-            number: 1,
-            title: "De vuelta a la termina",
-            img: "assets/imgs/Sesión01.webp"
-        },
-        {
-            number: 2,
-            title: "Rubén Hernández, empresario",
-            img: "assets/imgs/Sesión02.webp"
-        },
-        {
-            number: 3,
-            title: "A su servicio, Herrete",
-            img: "assets/imgs/Sesión03.webp"
-        },
-        {
-            number: 4,
-            title: "¿Rubén o Javier?",
-            img: "assets/imgs/Sesión04.webp"
-        },
-        {
-            number: 5,
-            title: "¡Javier!",
-            img: "assets/imgs/Sesión05.webp"
-        },
-        {
-            number: 6,
-            title: "Gallardo, (asistente del) Rey de los Corsarios",
-            img: "assets/imgs/Sesión06.webp"
-        },
-        {
-            number: 7,
-            title: "Oh mi capitán",
-            img: "assets/imgs/Sesión07.webp"
-        },
-        {
-            number: 8,
-            title: "-",
-            img: undefined
-        },
-        {
-            number: 9,
-            title: "El plan",
-            img: "assets/imgs/Sesión09.webp"
-        }
-    ]
-
-    const mainElement = document.querySelector("main");
-    sessions
-        .toSorted((a, b) => b.number - a.number)
-        .forEach(session => {
-            const articleElement = document.createElement("article");
-            articleElement.classList.add("session");
-            if (!session.title) {
-                return
-            }
-            const titleElement = document.createElement("h4");
-            titleElement.classList.add("title");
-            titleElement.textContent = `#${session.number} ${session.title}`;
-            titleElement.id = `sesion-${session.number}`;
-            articleElement.appendChild(titleElement);
-            if (session.img) {
-                const imgElement = document.createElement("img");
-                imgElement.src = session.img;
-                imgElement.alt = `Fotografía del la ${session.number} página del diario del Truhan Errante`;
-                articleElement.appendChild(imgElement);
-            }
-            mainElement?.appendChild(articleElement);
-        })
-</script>
 
 </html>

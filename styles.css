@@ -13,7 +13,48 @@
 html {
     background-color: var(--color-bg);
     color: var(--color-fg);
-    line-height: 3.5ch
+    line-height: 3.5ch;
+    scroll-behavior: smooth;
+}
+
+body.with-aside {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+
+    header {
+        grid-area: header;
+    }
+
+    @media (width <=1024px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+            "main"
+            "footer";
+
+        aside {
+            display: none;
+        }
+    }
+
+    aside {
+        grid-area: aside;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
 }
 
 main,
@@ -22,6 +63,18 @@ footer {
     max-width: 800px;
     margin: 0 auto;
     padding: 8px 16px;
+}
+
+aside {
+    padding: 8px 16px;
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 8px;
+        }
+    }
 }
 
 
@@ -40,14 +93,16 @@ a:visited {
     color: var(--color-accent);
 }
 
-img {
-    max-width: 100%;
-    max-height: 100dvh;
-}
 
 article.session {
     margin-bottom: 32px;
+
     .title {
         margin-bottom: 0px;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100dvh;
     }
 }
