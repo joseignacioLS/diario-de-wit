@@ -4,6 +4,10 @@ export const games = [
         url: "/el-truhan-errante/"
     },
     {
+        title: "Kuzo",
+        url: "/kuzo/"
+    },
+    {
         title: "La Escupidera",
         url: "/la-escupidera/"
     },
