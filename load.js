@@ -18,7 +18,8 @@ const render = () => {
         const listItem = createElement('li');
         const linkItem = createElement('a', {
             href: game.url ?? "",
-            textContent: game.title
+            textContent: game.title,
+            ariaLabel: game.url === undefined ? "Enlace deshabilitado" : ""
         });
         listItem.appendChild(linkItem);
         gamesListElement.appendChild(listItem);
