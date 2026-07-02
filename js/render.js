@@ -78,29 +78,23 @@ export const renderDiaryEntries = (sessions) => {
                 id: `arc-${session.arc ?? 1}-sesion-${session.session}`
             });
             articleElement.appendChild(titleElement);
-            if (session.img) {
-                const imgElement = createImage(
-                    session.img.src,
-                    session.img.caption,
-                    `Fotografía del la ${session.session} página del diario del Truhan Errante`
-                );
-                articleElement.appendChild(imgElement);
-            }
-            if (session.text) {
-                if (typeof session.text === "string") {
+
+            session.body.forEach((entry) => {
+                if (entry.type === "img") {
+                    const imgElement = createImage(
+                        entry.src,
+                        entry.caption,
+                        `Fotografía del la ${session.session} página del diario del Truhan Errante`
+                    );
+                    articleElement.appendChild(imgElement);
+                }
+                else if (entry.type === "p") {
                     const textElement = createElement("p", {
-                        textContent: session.text
+                        textContent: entry.text
                     });
                     articleElement.appendChild(textElement);
-                } else if (Array.isArray(session.text)) {
-                    session.text.forEach(text => {
-                        const textElement = createElement("p", {
-                            textContent: text
-                        });
-                        articleElement.appendChild(textElement);
-                    });
                 }
-            }
+            })
             mainElement.appendChild(articleElement);
         });
 }
