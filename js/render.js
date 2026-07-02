@@ -1,5 +1,3 @@
-import { sortSessions } from "./utils.js";
-
 export const createImage = (src, caption, alt) => {
     const figureElement = createElement("figure");
 
@@ -42,7 +40,7 @@ export const renderMenu = (sessions) => {
     const ulElement = document.querySelector("#menu-list");
     if (!ulElement) return;
 
-    sortSessions(sessions)
+    sessions
         .forEach(session => {
             if (!session.title) {
                 return;
@@ -68,7 +66,7 @@ export const renderDiaryEntries = (sessions) => {
     const mainElement = document.querySelector("main");
     if (!mainElement) return;
 
-    sortSessions(sessions)
+    sessions
         .filter(({ title }) => title !== undefined)
         .forEach(session => {
             const articleElement = createElement("article", { class: "session" });

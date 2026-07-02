@@ -1,10 +1,12 @@
-import { createImage, createElement, renderMenu, renderDiaryEntries } from "../js/render.js";
+import { createImage, createElement, renderMenu, renderDiaryEntries, } from "../js/render.js";
+import { sortSessions } from "../js/utils.js";
 import { sessions } from "./data.js";
 
 
 const render = async () => {
-    renderDiaryEntries(sessions);
-    renderMenu(sessions);
+    const sortedSessions = sortSessions(sessions);
+    renderDiaryEntries(sortedSessions);
+    renderMenu(sortedSessions);
 };
 
 render();
