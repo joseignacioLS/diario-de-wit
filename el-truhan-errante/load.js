@@ -2,10 +2,9 @@ import { createImage, createElement } from "../js/render.js";
 import { sessions } from "./data.js";
 
 const renderMenu = () => {
-    const asideElement = document.querySelector("aside");
-    if (!asideElement) return;
-    const menuElement = createElement("nav");
-    const ulElement = createElement("ul");
+    const ulElement = document.querySelector("#menu-list");
+    if (!ulElement) return;
+
     sessions
         .sort((a, b) => b.number - a.number)
         .forEach(session => {
@@ -20,8 +19,6 @@ const renderMenu = () => {
             liElement.appendChild(aElement);
             ulElement.appendChild(liElement);
         });
-    menuElement.appendChild(ulElement);
-    asideElement.appendChild(menuElement);
 }
 
 const renderDiaryEntries = () => {
