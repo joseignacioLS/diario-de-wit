@@ -45,8 +45,8 @@ a:visited {
     color: var(--color-accent);
 }
 
-a[href=""] {
-    opacity: .3;
+a[aria-disabled="true"] {
+    opacity: .5;
     pointer-events: none;
     cursor: default;
 }

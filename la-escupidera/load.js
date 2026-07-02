@@ -2,6 +2,8 @@ import { createImage, createElement, renderMenu, renderDiaryEntries } from "../j
 import { sessions } from "./data.js";
 
 
+
+
 const render = async () => {
     renderDiaryEntries(sessions);
     renderMenu(sessions);

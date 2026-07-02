@@ -1,15 +1,7 @@
 import { createElement } from "./js/render.js";
+import { games } from "./assets/data/games.js";
 
-const games = [
-    {
-        title: "El Truhan Errante",
-        url: "/el-truhan-errante/"
-    },
-    {
-        title: "El Diario de Wit",
-        url: undefined
-    }
-]
+
 
 const render = () => {
     const gamesListElement = document.querySelector('#games-list');
@@ -19,7 +11,7 @@ const render = () => {
         const linkItem = createElement('a', {
             href: game.url ?? "",
             textContent: game.title,
-            ariaLabel: game.url === undefined ? "Enlace deshabilitado" : ""
+            ariaDisabled: game.url === undefined
         });
         listItem.appendChild(linkItem);
         gamesListElement.appendChild(listItem);

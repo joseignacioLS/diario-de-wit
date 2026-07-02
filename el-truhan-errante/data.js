@@ -1,46 +1,46 @@
 export const sessions = [
     {
-        number: 1,
+        session: 1,
         title: "De vuelta a la termita",
         img: { src: "assets/imgs/Sesión01.webp", caption: undefined }
     },
     {
-        number: 2,
+        session: 2,
         title: "Rubén Hernández, empresario",
         img: { src: "assets/imgs/Sesión02.webp", caption: undefined }
     },
     {
-        number: 3,
+        session: 3,
         title: "A su servicio, Herrete",
         img: { src: "assets/imgs/Sesión03.webp", caption: undefined }
     },
     {
-        number: 4,
+        session: 4,
         title: "¿Rubén o Javier?",
         img: { src: "assets/imgs/Sesión04.webp", caption: undefined }
     },
     {
-        number: 5,
+        session: 5,
         title: "¡Javier!",
         img: { src: "assets/imgs/Sesión05.webp", caption: undefined }
     },
     {
-        number: 6,
+        session: 6,
         title: "Gallardo, (asistente del) Rey de los Corsarios",
         img: { src: "assets/imgs/Sesión06.webp", caption: undefined }
     },
     {
-        number: 7,
+        session: 7,
         title: "Oh mi capitán",
         img: { src: "assets/imgs/Sesión07.webp", caption: undefined }
     },
     {
-        number: 8,
+        session: 8,
         title: "-",
         img: { src: undefined, caption: "Por algún motivo esta sesión no hice diario" }
     },
     {
-        number: 9,
+        session: 9,
         title: "El plan",
         img: { src: "assets/imgs/Sesión09.webp", caption: undefined }
     },
