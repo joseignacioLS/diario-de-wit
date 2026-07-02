@@ -4,6 +4,10 @@ const games = [
     {
         title: "El Truhan Errante",
         url: "/el-truhan-errante/"
+    },
+    {
+        title: "El Diario de Wit",
+        url: undefined
     }
 ]
 
@@ -13,7 +17,7 @@ const render = () => {
     games.forEach(game => {
         const listItem = createElement('li');
         const linkItem = createElement('a', {
-            href: game.url,
+            href: game.url ?? "",
             textContent: game.title
         });
         listItem.appendChild(linkItem);
