@@ -7,37 +7,32 @@
     <title>Diario de Wit</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<script src="./load.js" defer type="module"></script>
 
 <body>
     <header>
-        <h1>Diario de Wit</h1>
+        <h1>El Diario de Wit</h1>
     </header>
-    <main>
-        <h2>Partidas</h2>
-        <ul id="games-list">
-        </ul>
+    <main class="home-main">
+        <section>
+            <h2>Partidas</h2>
+            <ul id="games-list">
+            </ul>
+        </section>
+        <section>
+            <h2>About</h2>
+            <p>Mi nombre es Jose y soy jugador de TTRPGs desde 2010. Desde que comencé a jugar he sido ese perfil de
+                jugador que hace garabatos o anota frases sueltas
+                representativa de las sesiones.
+            <p>La primera vez que hice esto fue llevando a un guerrero humano en una partida de D&D3.5 llamado Wit
+                Nimros, que tomaba notas en su diario, mostrando su punto de vista de los sucesos que vivía.</p>
+            <p>A día de hoy llevo más el rol de <em>Game Master</em> que jugador, por lo que me es complicado documentar
+                la sesión mientras la dirijo. Sin embargo, no pierdo oportunidad de hacer algún diario cuando participo
+                como jugador.</p>
+
+        </section>
     </main>
     <footer></footer>
 </body>
-<script>
-    const baseUrl = "https://joseignaciols.github.io/diario-de-wit"
-    const isProduction = window.location.hostname === "joseignaciols.github.io";
-    const games = [
-        {
-            title: "El Truhan Errante",
-            url: "/el-truhan-errante/"
-        }
-    ]
-    const gamesListElement = document.querySelector('#games-list');
-
-    games.forEach(game => {
-        const listItem = document.createElement('li');
-        const linkItem = document.createElement('a');
-        linkItem.href = isProduction ? baseUrl + game.url : game.url;
-        linkItem.textContent = game.title;
-        listItem.appendChild(linkItem);
-        gamesListElement?.appendChild(listItem);
-    });
-</script>
 
 </html>

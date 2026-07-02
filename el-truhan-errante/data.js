@@ -43,5 +43,5 @@ export const sessions = [
         number: 9,
         title: "El plan",
         img: { src: "assets/imgs/Sesión09.webp", caption: undefined }
-    }
+    },
 ]
