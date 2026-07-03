@@ -19,7 +19,7 @@ export const sessions = [
         session: 2,
         title: "El oro",
         body: [
-            { type: "img", src: "./assets/imgs/oro.webp" },
+            { type: "img", src: "/oro.webp" },
             {
                 type: "p",
                 text: "Los chicos de Fred (Wyat, Louis y James) no tardaron en aparecer por la Escupidera, como era de esperar. Los tortazos fueron más rápidos que las palabras y Wyat estaba fuera de combate antes de que sus secuaces pudieran hacer nada. Las cosas hubiesen ido a mayores si Tomas no hubiese aparecido por el saloon anunciando que había adquirido la mina de oro, y que estaba de celebración. Los chicos celebraron con su jefe antes de volver al rancho. Una vez allí Alain decidió hacer guardia al escuchar el aullar de los coyotes, sin ningún tipo de apoyo por sus compañeros. La noche pasó tranquila y a la mañana siguiente Tomas les habló de un acuerdo con ellos para sacar el oro de la mina: 25% para los chicos, 75% para Tomas. Aceptaron sin dudar y se dirigieron a la mina a examinar su estado. En lo más profundo encontraron una zona derrumbada, posiblemente en las últimas detonaciones, que consiguieron salvar, dando a una pequeña galería cuyas paredes estaban recubiertas de oro. Sin dudarlo empezaron a picar y extraerlo."
@@ -31,7 +31,7 @@ export const sessions = [
         session: 3,
         title: "La advertencia",
         body: [
-            { type: "img", src: "./assets/imgs/wops.webp" },
+            { type: "img", src: "/wops.webp" },
             {
                 type: "p",
                 text: "Después de un día entero trabajando en la mina Vince, Will y Alain consiguen llenar sus alforjas de rojas incrustadas con oro. Sin embargo Bill de Zamora, un viejo senil que habita las montañas les inquirió la propiedad de la mina en nombre de Isabel de Castilla. Los chavales consiguieron reducirle y calmarle asegurándole su lealtad a España, dejando que Bill se perdiera de nuevo en las montañas. La vuelta al rancho sin embargo no fue tranquila, Wyatt y el resto de los chavales de Fred les pararon y les interrogaron a punta de rifle a cerca de la mina. Un intercambio de insultos y amenazas acabó en un registro de las alforjas de Vince, y que Wyatt les asegurase que sabrían de él.",

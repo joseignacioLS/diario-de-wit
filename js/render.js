@@ -62,7 +62,7 @@ export const renderMenu = (sessions) => {
         });
 }
 
-export const renderDiaryEntries = (sessions) => {
+export const renderDiaryEntries = (sessions, diary) => {
     const sessionsElement = document.querySelector("#sessions");
     if (!sessionsElement) return;
 
@@ -80,7 +80,7 @@ export const renderDiaryEntries = (sessions) => {
             session.body.forEach((entry) => {
                 if (entry.type === "img") {
                     const imgElement = createImage(
-                        entry.src,
+                        `/assets/imgs/${diary}${entry.src}`,
                         entry.caption,
                         `Fotografía del la ${session.session} página del diario del Truhan Errante`
                     );

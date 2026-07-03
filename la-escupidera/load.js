@@ -1,11 +1,9 @@
 import { createImage, createElement, renderMenu, renderDiaryEntries } from "../js/render.js";
 import { sessions } from "./data.js";
 
-
-
-
 const render = async () => {
-    renderDiaryEntries(sessions);
+    const sortedSessions = sortSessions(sessions);
+    renderDiaryEntries(sessions, "la-escupidera");
     renderMenu(sessions);
 };
 
