@@ -1,7 +1,4 @@
 import { sortSessions } from "./utils.js"
-import { sessions as ElTruhanErrante } from "../el-truhan-errante/data.js"
-import { sessions as Kuzo } from "../kuzo/data.js"
-import { sessions as LaEscupidera } from "../la-escupidera/data.js"
 
 export const createImage = (src, caption, alt) => {
     const figureElement = createElement("figure");
@@ -107,15 +104,11 @@ const resetRender = () => {
     document.querySelector("#sessions").innerHTML = ""
 }
 
-const sessionsData = {
-    "el-truhan-errante": ElTruhanErrante,
-    "kuzo": Kuzo,
-    "la-escupidera": LaEscupidera,
-}
 
-export const renderDiary = (name, asc = false) => {
+export const renderDiary = async (name, asc = false) => {
     resetRender();
-    const sessions = sessionsData[name]
+    const sessions = await import("/" + name + "/data.js").then(m => m.sessions)
+    if (!sessions) return;
     const sortedSessions = sortSessions(sessions, asc);
     renderDiaryEntries(sortedSessions, name);
     renderMenu(sortedSessions);
