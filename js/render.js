@@ -82,7 +82,7 @@ export const renderDiaryEntries = (sessions, diary) => {
             session.body.forEach((entry) => {
                 if (entry.type === "img") {
                     const imgElement = createImage(
-                        `/assets/imgs/${diary}${entry.src}`,
+                        `../assets/imgs/${diary}${entry.src}`,
                         entry.caption,
                         `Fotografía del la ${session.session} página del diario del Truhan Errante`
                     );
