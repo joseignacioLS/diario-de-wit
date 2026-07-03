@@ -107,7 +107,7 @@ const resetRender = () => {
 
 export const renderDiary = async (name, asc = false) => {
     resetRender();
-    const sessions = await import("/" + name + "/data.js").then(m => m.sessions)
+    const sessions = await import("../" + name + "/data.js").then(m => m.sessions)
     if (!sessions) return;
     const sortedSessions = sortSessions(sessions, asc);
     renderDiaryEntries(sortedSessions, name);
