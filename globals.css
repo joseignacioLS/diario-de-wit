@@ -96,6 +96,10 @@ body.with-aside {
         }
     }
 
+    header {
+        width: 100%;
+    }
+
     main {
         grid-area: main;
     }

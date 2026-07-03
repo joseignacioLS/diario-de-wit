@@ -63,8 +63,8 @@ export const renderMenu = (sessions) => {
 }
 
 export const renderDiaryEntries = (sessions) => {
-    const mainElement = document.querySelector("main");
-    if (!mainElement) return;
+    const sessionsElement = document.querySelector("#sessions");
+    if (!sessionsElement) return;
 
     sessions
         .filter(({ title }) => title !== undefined)
@@ -93,6 +93,6 @@ export const renderDiaryEntries = (sessions) => {
                     articleElement.appendChild(textElement);
                 }
             })
-            mainElement.appendChild(articleElement);
+            sessionsElement.appendChild(articleElement);
         });
 }
