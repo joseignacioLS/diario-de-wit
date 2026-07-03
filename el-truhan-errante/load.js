@@ -1,5 +1,5 @@
-import { createImage, createElement, renderMenu, renderDiaryEntries, } from "../js/render.js";
-import { sortSessions } from "../js/utils.js";
+import { createImage, createElement, renderMenu, renderDiaryEntries, } from "../_js/render.js";
+import { sortSessions } from "../_js/utils.js";
 import { sessions } from "./data.js";
 
 

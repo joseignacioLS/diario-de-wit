@@ -1,4 +1,4 @@
-import { createImage, createElement, renderMenu, renderDiaryEntries } from "../js/render.js";
+import { createImage, createElement, renderMenu, renderDiaryEntries } from "../_js/render.js";
 import { sessions } from "./data.js";
 
 const render = async () => {
