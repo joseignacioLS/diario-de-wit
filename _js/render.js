@@ -1,3 +1,8 @@
+import { sortSessions } from "./utils.js"
+import { sessions as ElTruhanErrante } from "../el-truhan-errante/data.js"
+import { sessions as Kuzo } from "../kuzo/data.js"
+import { sessions as LaEscupidera } from "../la-escupidera/data.js"
+
 export const createImage = (src, caption, alt) => {
     const figureElement = createElement("figure");
 
@@ -95,4 +100,18 @@ export const renderDiaryEntries = (sessions, diary) => {
             })
             sessionsElement.appendChild(articleElement);
         });
+}
+
+const sessionsData = {
+    "el-truhan-errante": ElTruhanErrante,
+    "kuzo": Kuzo,
+    "la-escupidera": LaEscupidera,
+}
+
+export const renderDiary = (name) => {
+    const sessions = sessionsData[name]
+    const sortedSessions = sortSessions(sessions);
+    renderDiaryEntries(sortedSessions, name);
+    renderMenu(sortedSessions);
+
 }

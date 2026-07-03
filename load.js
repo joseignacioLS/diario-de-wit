@@ -1,4 +1,4 @@
-import { createElement } from "./js/render.js";
+import { createElement } from "./_js/render.js";
 import { games } from "./assets/data/games.js";
 
 
