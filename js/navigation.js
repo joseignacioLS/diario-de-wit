@@ -7,6 +7,6 @@ const anchors = document.querySelectorAll("a");
 if (isProduction) {
     Array.from(anchors)
         .forEach(a => {
-            a.href = `${origin}${projectPathName}${a.pathname?.replace(projectPathName, "") ?? ""}${a.hash ?? ""}`
+            a.href = `${origin}${projectPathName}${a.pathname?.replace(projectPathName, "") ?? ""}${a.search ?? ""}${a.hash ?? ""}`
         });
 }

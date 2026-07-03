@@ -62,9 +62,9 @@ export const renderMenu = (sessions) => {
         });
 }
 
-export const renderDiaryEntries = (sessions) => {
-    const mainElement = document.querySelector("main");
-    if (!mainElement) return;
+export const renderDiaryEntries = (diary, sessions) => {
+    const sessionsElement = document.querySelector("#sessions");
+    if (!sessionsElement) return;
 
     sessions
         .filter(({ title }) => title !== undefined)
@@ -80,7 +80,7 @@ export const renderDiaryEntries = (sessions) => {
             session.body.forEach((entry) => {
                 if (entry.type === "img") {
                     const imgElement = createImage(
-                        entry.src,
+                        "./assets/" + diary + entry.src,
                         entry.caption,
                         `Fotografía del la ${session.session} página del diario del Truhan Errante`
                     );
@@ -93,6 +93,14 @@ export const renderDiaryEntries = (sessions) => {
                     articleElement.appendChild(textElement);
                 }
             })
-            mainElement.appendChild(articleElement);
+            sessionsElement.appendChild(articleElement);
         });
+}
+
+export const renderDiaryInfo = (title, summary) => {
+    document.title = title;
+    const titleElement = document.querySelector("#title")
+    titleElement.innerHTML = title;
+    const summaryElement = document.querySelector("#summary")
+    summaryElement.innerHTML = summary
 }
