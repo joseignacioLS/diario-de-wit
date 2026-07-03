@@ -102,16 +102,21 @@ export const renderDiaryEntries = (sessions, diary) => {
         });
 }
 
+const resetRender = () => {
+    document.querySelector("#menu-list").innerHTML = ""
+    document.querySelector("#sessions").innerHTML = ""
+}
+
 const sessionsData = {
     "el-truhan-errante": ElTruhanErrante,
     "kuzo": Kuzo,
     "la-escupidera": LaEscupidera,
 }
 
-export const renderDiary = (name) => {
+export const renderDiary = (name, asc = false) => {
+    resetRender();
     const sessions = sessionsData[name]
-    const sortedSessions = sortSessions(sessions);
+    const sortedSessions = sortSessions(sessions, asc);
     renderDiaryEntries(sortedSessions, name);
     renderMenu(sortedSessions);
-
 }

@@ -21,7 +21,21 @@
     <link rel="stylesheet" href="./styles.css">
     <script defer type="module">
         import { renderDiary } from "../_js/render.js";
-        renderDiary("el-truhan-errante");
+        const diary = "el-truhan-errante"
+        renderDiary(diary);
+
+        document.querySelector("#sort").addEventListener("click", (e) => {
+            if (e.target.dataset.sort === "desc") {
+                e.target.dataset.sort = "asc";
+                e.target.innerHTML = "Ascendente"
+                renderDiary(diary, true)
+            }
+            else {
+                e.target.dataset.sort = "desc";
+                e.target.innerHTML = "Descendente"
+                renderDiary(diary, false)
+            }
+        })
     </script>
     <script src="../_js/navigation.js" type="module" defer></script>
 </head>
@@ -45,7 +59,7 @@
             Cornelio, junto a sus compañeros Rufus y Silvestre, que pongan a la tripulación del Truhan Errante de vuelta
             en altamar, consiguiendo una reparación... o quizás un nuevo barco.
         </p>
-        <h2>Sesiones</h2>
+        <h2>Sesiones <button id="sort" data-sort="desc">Descendente</button></h2>
         <section id="sessions"></section>
     </main>
     <footer></footer>
