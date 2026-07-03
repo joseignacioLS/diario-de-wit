@@ -13,6 +13,6 @@ export const games = [
     },
     {
         title: "El Diario de Wit",
-        url: undefined
+        url: "/diario-de-wit"
     }
 ]
