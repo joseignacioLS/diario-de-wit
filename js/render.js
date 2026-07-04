@@ -46,38 +46,54 @@ const renderDiaryMenu = (sessions) => {
         });
 };
 
+const generateSessionArticle = (session, diary) => {
+    const articleElement = createElement("article", { class: "session" });
+    const titleElement = createElement("h4", {
+        class: "title",
+        textContent: `#${session.arc ? session.arc + "." : ""}${session.session} ${session.title}`,
+        id: `arc-${session.arc ?? 1}-sesion-${session.session}`
+    });
+    articleElement.appendChild(titleElement);
+
+    session.body.forEach((entry) => {
+        if (entry.type === "img") {
+            const imgElement = createImage(
+                `../assets/imgs/${diary}${entry.src}`,
+                entry.caption,
+                entry.alt
+            );
+            articleElement.appendChild(imgElement);
+        }
+        else if (entry.type === "p") {
+            const textElement = createElement("p", {
+                textContent: entry.text
+            });
+            articleElement.appendChild(textElement);
+        }
+    });
+    return articleElement;
+};
+
 const renderDiaryEntries = (sessions, diary) => {
     const sessionsElement = document.querySelector("#sessions");
     if (!sessionsElement) return;
+    let currentArc = 0;
+
+    const checkArc = (sessionArc) => {
+        if (sessionArc > currentArc) {
+            currentArc = sessionArc;
+            const arcElement = createElement("h3", {
+                textContent: `Arco ${currentArc}`
+            });
+            sessionsElement.appendChild(arcElement);
+        }
+    };
 
     sessions
         .filter(({ title }) => title !== undefined)
         .forEach(session => {
-            const articleElement = createElement("article", { class: "session" });
-            const titleElement = createElement("h3", {
-                class: "title",
-                textContent: `#${session.arc ? session.arc + "." : ""}${session.session} ${session.title}`,
-                id: `arc-${session.arc ?? 1}-sesion-${session.session}`
-            });
-            articleElement.appendChild(titleElement);
-
-            session.body.forEach((entry) => {
-                if (entry.type === "img") {
-                    const imgElement = createImage(
-                        `../assets/imgs/${diary}${entry.src}`,
-                        entry.caption,
-                        `Fotografía del la ${session.session} página del diario del Truhan Errante`
-                    );
-                    articleElement.appendChild(imgElement);
-                }
-                else if (entry.type === "p") {
-                    const textElement = createElement("p", {
-                        textContent: entry.text
-                    });
-                    articleElement.appendChild(textElement);
-                }
-            });
-            sessionsElement.appendChild(articleElement);
+            checkArc(session.arc ?? 1);
+            sessionsElement.appendChild(generateSessionArticle(session, diary));
         });
 };
 

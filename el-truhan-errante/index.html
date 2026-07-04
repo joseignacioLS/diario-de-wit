@@ -1,69 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Resumen de la partida de rol El Truhan Errante, con una ilustración resumen de cada sesión">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Resumen de la partida de rol El Truhan Errante, con una ilustración resumen de cada sesión"
+    />
     <title>El Truhan Errante</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../favicon.ico"
+    />
 
-    <meta property="og:title" content="El Diario de Wit - El Truhan Errante">
-    <meta property="og:description" content="Resumenes de la partida de piratas El Truhan Errante">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://joseignaciols.github.io/diario-de-wit/el-truhan-errante">
-    <meta property="og:image" content="https://joseignaciols.github.io/diario-de-wit/assets/imgs/loaderror.webp">
-    <meta property="og:image:width" content="247">
-    <meta property="og:image:height" content="264">
-    <meta property="og:site_name" content="Diario de Wit">
-    <meta property="og:locale" content="es_ES">
+    <meta
+      property="og:title"
+      content="El Diario de Wit - El Truhan Errante"
+    />
+    <meta
+      property="og:description"
+      content="Resumenes de la partida de piratas El Truhan Errante"
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="https://joseignaciols.github.io/diario-de-wit/el-truhan-errante"
+    />
+    <meta
+      property="og:image"
+      content="https://joseignaciols.github.io/diario-de-wit/assets/imgs/loaderror.webp"
+    />
+    <meta
+      property="og:image:width"
+      content="247"
+    />
+    <meta
+      property="og:image:height"
+      content="264"
+    />
+    <meta
+      property="og:site_name"
+      content="Diario de Wit"
+    />
+    <meta
+      property="og:locale"
+      content="es_ES"
+    />
 
-    <link rel="stylesheet" href="./styles.css">
-    <script defer type="module">
-        import { renderDiary } from "../js/render.js";
-        const diary = "el-truhan-errante"
-        renderDiary(diary);
+    <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
+    <script
+      defer
+      type="module"
+    >
+      import { renderDiary } from "../js/render.js";
+      const diary = "el-truhan-errante";
+      renderDiary(diary);
 
-        document.querySelector("#sort").addEventListener("click", (e) => {
-            if (e.target.dataset.sort === "desc") {
-                e.target.dataset.sort = "asc";
-                e.target.innerHTML = "Ascendente"
-                renderDiary(diary, true)
-            }
-            else {
-                e.target.dataset.sort = "desc";
-                e.target.innerHTML = "Descendente"
-                renderDiary(diary, false)
-            }
-        })
+      document.querySelector("#sort").addEventListener("click", (e) => {
+        if (e.target.dataset.sort === "desc") {
+          e.target.dataset.sort = "asc";
+          e.target.innerHTML = "Ascendente";
+          renderDiary(diary, true);
+        } else {
+          e.target.dataset.sort = "desc";
+          e.target.innerHTML = "Descendente";
+          renderDiary(diary, false);
+        }
+      });
     </script>
-    <script src="../js/navigation.js" type="module" defer></script>
-</head>
+    <script
+      src="../js/navigation.js"
+      type="module"
+      defer
+    ></script>
+  </head>
 
-<body class="with-aside">
+  <body class="with-aside">
     <header>
-        <a href="/">Atrás</a>
-        <h1>El Truhan Errante</h1>
+      <a href="/">Atrás</a>
+      <h1>El Truhan Errante</h1>
     </header>
     <aside>
-        <nav>
-            <ul id="menu-list"></ul>
-        </nav>
+      <nav>
+        <button
+          id="sort"
+          data-sort="desc"
+        >
+          Descendente
+        </button>
+        <ul id="menu-list"></ul>
+      </nav>
     </aside>
     <main>
-        <h2>
-            Resumen
-        </h2>
-        <p>El Truhan Errante es el nombre del barco en el que Cornelio Tramontana, corsario, recorre los mares. O los
-            recorrería, si no estuviese amarrado en el puerto de Marea Baja. El capitán Damián ha encomendado a
-            Cornelio, junto a sus compañeros Rufus y Silvestre, que pongan a la tripulación del Truhan Errante de vuelta
-            en altamar, consiguiendo una reparación... o quizás un nuevo barco.
-        </p>
-        <h2>Sesiones <button id="sort" data-sort="desc">Descendente</button></h2>
-        <section id="sessions"></section>
+      <h2>Resumen</h2>
+      <p>
+        El Truhan Errante es el nombre del barco en el que Cornelio Tramontana,
+        corsario, recorre los mares. O los recorrería, si no estuviese amarrado
+        en el puerto de Marea Baja. El capitán Damián ha encomendado a Cornelio,
+        junto a sus compañeros Rufus y Silvestre, que pongan a la tripulación
+        del Truhan Errante de vuelta en altamar, consiguiendo una reparación...
+        o quizás un nuevo barco.
+      </p>
+      <h2>Sesiones</h2>
+      <section id="sessions"></section>
     </main>
     <footer></footer>
-</body>
-
+  </body>
 </html>

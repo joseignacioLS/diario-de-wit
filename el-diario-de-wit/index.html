@@ -1,57 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Resumen de la partida de rol La Escupidera">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Resumen de la partida de rol La Escupidera"
+    />
     <title>La Escupidera</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="stylesheet" href="./styles.css">
-    <script type="module" defer>
-        import { renderDiary } from "../js/render.js";
-        const diary = "diario-de-wit"
-        renderDiary(diary);
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
+    <script
+      type="module"
+      defer
+    >
+      import { renderDiary } from "../js/render.js";
+      const diary = "diario-de-wit";
+      renderDiary(diary);
 
-        document.querySelector("#sort").addEventListener("click", (e) => {
-            if (e.target.dataset.sort === "desc") {
-                e.target.dataset.sort = "asc";
-                e.target.innerHTML = "Ascendente"
-                renderDiary(diary, true)
-            }
-            else {
-                e.target.dataset.sort = "desc";
-                e.target.innerHTML = "Descendente"
-                renderDiary(diary, false)
-            }
-        })
+      document.querySelector("#sort").addEventListener("click", (e) => {
+        if (e.target.dataset.sort === "desc") {
+          e.target.dataset.sort = "asc";
+          e.target.innerHTML = "Ascendente";
+          renderDiary(diary, true);
+        } else {
+          e.target.dataset.sort = "desc";
+          e.target.innerHTML = "Descendente";
+          renderDiary(diary, false);
+        }
+      });
     </script>
-    <script src="../js/navigation.js" type="module" defer></script>
-</head>
+    <script
+      src="../js/navigation.js"
+      type="module"
+      defer
+    ></script>
+  </head>
 
-<body class="with-aside">
+  <body class="with-aside">
     <header>
-        <a href="/">Atrás</a>
-        <h1>El Diario de Wit</h1>
+      <a href="/">Atrás</a>
+      <h1>El Diario de Wit</h1>
     </header>
     <aside>
-        <nav>
-            <ul id="menu-list"></ul>
-        </nav>
+      <nav>
+        <button
+          id="sort"
+          data-sort="desc"
+        >
+          Descendente
+        </button>
+        <ul id="menu-list"></ul>
+      </nav>
     </aside>
     <main>
-        <h2>
-            Resumen
-        </h2>
-        <p>
-            Por desgracia el diario de Wit original se ha perdido en el tiempo. Tengo algunas cosas sueltas, pero no
-            para recomponer la campaña que jugué en su momento.
-        </p>
+      <h2>Resumen</h2>
+      <p>
+        Por desgracia el diario de Wit original se ha perdido en el tiempo.
+        Tengo algunas cosas sueltas, pero no para recomponer la campaña que
+        jugué en su momento.
+      </p>
 
-        <h2>Sesiones <button id="sort" data-sort="desc">Descendente</button></h2>
-        <section id="sessions"></section>
+      <h2>Sesiones</h2>
+      <section id="sessions"></section>
     </main>
     <footer></footer>
-</body>
-
+  </body>
 </html>
