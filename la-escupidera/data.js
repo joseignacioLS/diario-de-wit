@@ -151,4 +151,14 @@ export const sessions = [
             { type: "p", text: "Vince, tras interrogar al enemigo restante en el cobertizo y confirmar el papel de estos en el contrabando, decide llevarlo a Cíbolo para que testifique." }
         ]
     },
-]
+    {
+        arc: 3,
+        session: 4,
+        title: "La muerte",
+        body: [
+            { type: "p", text: "Por algún motivo nunca llegué al escribir el resumen de esta sesión que concluye el arco. Pero esto es lo que recuerdo." },
+            { type: "p", text: "Wyatt huyé de Cíbolo hacia el lugar donde lleva a cabo el contrabando con los indígenas. Los muchachos le siguen hasta allí y tratan de moverse entre las sombras para emboscar a Wyatt." },
+            { type: "p", text: "Los indígenas se presentan allí y se forma una batalla a tres bandos. Las balas vuelan y Wyatt vuelve a conseguir huir, esta vez malherido. Cuando los muchachos lo persiguen escuchan varios disparos y encuentran al sheriff malherido, quien con sus últimas palabras le pide a Alain que tome su puesto. Los muchachos dan caza a Wyatt y acaban con él antes de volver al pueblo." }
+        ]
+    },
+];
