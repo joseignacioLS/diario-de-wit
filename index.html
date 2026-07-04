@@ -1,74 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="El Diario de Wit es un espacio donde un jugador de TTRPGs lleva un registro del diario de sus partidas">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="El Diario de Wit es un espacio donde un jugador de TTRPGs lleva un registro del diario de sus partidas"
+    />
     <title>Diario de Wit</title>
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
 
-    <meta property="og:title" content="El Diario de Wit">
-    <meta property="og:description" content="Diarios de partidas de rol">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://joseignaciols.github.io/diario-de-wit/">
-    <meta property="og:image" content="https://joseignaciols.github.io/diario-de-wit/assets/imgs/loaderror.webp">
-    <meta property="og:image:width" content="247">
-    <meta property="og:image:height" content="264">
-    <meta property="og:site_name" content="Diario de Wit">
-    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="El Diario de Wit" />
+    <meta property="og:description" content="Diarios de partidas de rol" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://joseignaciols.github.io/diario-de-wit/"
+    />
+    <meta
+      property="og:image"
+      content="https://joseignaciols.github.io/diario-de-wit/assets/imgs/loaderror.webp"
+    />
+    <meta property="og:image:width" content="247" />
+    <meta property="og:image:height" content="264" />
+    <meta property="og:site_name" content="Diario de Wit" />
+    <meta property="og:locale" content="es_ES" />
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script defer type="module">
-        import { createElement } from "./js/render.js";
-        import { games } from "./assets/data/games.js";
-
-        const render = () => {
-            const gamesListElement = document.querySelector('#games-list');
-            if (!gamesListElement) return;
-            games.forEach(game => {
-                const listItem = createElement('li');
-                const linkItem = createElement('a', {
-                    href: game.url ?? "",
-                    textContent: game.title,
-                    ariaDisabled: game.url === undefined
-                });
-                listItem.appendChild(linkItem);
-                gamesListElement.appendChild(listItem);
-            });
-        }
-
-        render();
+      import { renderGameList } from "./js/render.js";
+      renderGameList();
     </script>
     <script src="./js/navigation.js" defer type="module"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>El Diario de Wit</h1>
+      <h1>El Diario de Wit</h1>
     </header>
     <main class="home-main">
-        <section>
-            <h2>Partidas</h2>
-            <ul id="games-list">
-            </ul>
-        </section>
-        <section>
-            <h2>Sobre mí</h2>
-            <p>Mi nombre es Jose y soy jugador de TTRPGs desde 2010. Desde que comencé a jugar he sido ese perfil de
-                jugador que hace garabatos o anota frases sueltas
-                representativa de las sesiones.
-            <p>La primera vez que hice esto fue llevando a un guerrero humano en una partida de D&D3.5 llamado Wit
-                Nimros, que tomaba notas en su diario, mostrando su punto de vista de los sucesos que vivía.</p>
-            <p>A día de hoy llevo más el rol de <em>Game Master</em> que jugador, por lo que me es complicado documentar
-                la sesión mientras la dirijo. Sin embargo, no pierdo oportunidad de hacer algún diario cuando participo
-                como jugador.
-            </p>
+      <section>
+        <h2>Partidas</h2>
+        <ul id="games-list"></ul>
+      </section>
+      <section>
+        <h2>Sobre mí</h2>
+        <p>
+          Mi nombre es Jose y soy jugador de TTRPGs desde 2010. Desde que
+          comencé a jugar he sido ese perfil de jugador que hace garabatos o
+          anota frases sueltas representativa de las sesiones.
+        </p>
 
-        </section>
+        <p>
+          La primera vez que hice esto fue llevando a un guerrero humano en una
+          partida de D&D3.5 llamado Wit Nimros, que tomaba notas en su diario,
+          mostrando su punto de vista de los sucesos que vivía.
+        </p>
+        <p>
+          A día de hoy llevo más el rol de <em>Game Master</em> que jugador, por
+          lo que me es complicado documentar la sesión mientras la dirijo. Sin
+          embargo, no pierdo oportunidad de hacer algún diario cuando participo
+          como jugador.
+        </p>
+      </section>
     </main>
     <footer></footer>
-</body>
-
+  </body>
 </html>

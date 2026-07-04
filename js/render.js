@@ -1,44 +1,25 @@
-import { sortSessions } from "./utils.js"
+import { sortSessions } from "./utils.js";
+import { createElement, createImage } from "./dom.js";
 
-export const createImage = (src, caption, alt) => {
-    const figureElement = createElement("figure");
-
-    const imgElement = createElement("img", {
-        src: src,
-        alt: alt,
-        onerror: () => {
-            imgElement.src = "../assets/imgs/loaderror.webp";
-        }
-    });
-    figureElement.appendChild(imgElement);
-    if (caption) {
-        const captionElement = createElement("figcaption", {
-            innerHTML: caption
+export const renderGameList = () => {
+    const gamesListElement = document.querySelector('#games-list');
+    if (!gamesListElement) return;
+    import("../assets/data/games.js").then(({ games }) => {
+        games.forEach(game => {
+            const listItem = createElement('li');
+            const linkItem = createElement('a', {
+                href: game.url ?? "",
+                textContent: game.title,
+                ariaDisabled: game.url === undefined
+            });
+            listItem.appendChild(linkItem);
+            gamesListElement.appendChild(listItem);
         });
-        figureElement.appendChild(captionElement);
-    }
-    return figureElement
-}
+    });
+};
 
 
-export const createElement = (tag, attrs = {}) => {
-    const element = document.createElement(tag);
-    for (const [key, value] of Object.entries(attrs)) {
-        if (key === "class") {
-            element.classList.add(...value.split(" "));
-        } else if (key === "style") {
-            for (const [styleKey, styleValue] of Object.entries(value)) {
-                element.style[styleKey] = styleValue;
-            }
-        } else {
-            element[key] = value
-        }
-    }
-    return element
-}
-
-
-export const renderMenu = (sessions) => {
+const renderDiaryMenu = (sessions) => {
     const ulElement = document.querySelector("#menu-list");
     if (!ulElement) return;
 
@@ -62,9 +43,9 @@ export const renderMenu = (sessions) => {
             liElement.appendChild(aElement);
             arcUlElement.appendChild(liElement);
         });
-}
+};
 
-export const renderDiaryEntries = (sessions, diary) => {
+const renderDiaryEntries = (sessions, diary) => {
     const sessionsElement = document.querySelector("#sessions");
     if (!sessionsElement) return;
 
@@ -94,22 +75,28 @@ export const renderDiaryEntries = (sessions, diary) => {
                     });
                     articleElement.appendChild(textElement);
                 }
-            })
+            });
             sessionsElement.appendChild(articleElement);
         });
-}
+};
 
 const resetRender = () => {
-    document.querySelector("#menu-list").innerHTML = ""
-    document.querySelector("#sessions").innerHTML = ""
-}
+    const menuListElement = document.querySelector("#menu-list");
+    const sessionsElement = document.querySelector("#sessions");
+    if (menuListElement) {
+        menuListElement.innerHTML = "";
+    }
+    if (sessionsElement) {
+        sessionsElement.innerHTML = "";
+    }
+};
 
 
 export const renderDiary = async (name, asc = false) => {
     resetRender();
-    const sessions = await import("../" + name + "/data.js").then(m => m.sessions)
+    const sessions = await import("../" + name + "/data.js").then(m => m.sessions);
     if (!sessions) return;
     const sortedSessions = sortSessions(sessions, asc);
     renderDiaryEntries(sortedSessions, name);
-    renderMenu(sortedSessions);
-}
+    renderDiaryMenu(sortedSessions);
+};
