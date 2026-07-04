@@ -122,7 +122,6 @@ article.session {
 
   .title {
     margin-bottom: 0px;
-    border-bottom: 1px solid var(--color-fg);
   }
 
   img {
@@ -156,4 +155,8 @@ button {
   border: 0;
   background-color: transparent;
   cursor: pointer;
+}
+
+.title-with-border {
+  border-bottom: 1px solid var(--color-fg);
 }
