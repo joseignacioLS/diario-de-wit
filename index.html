@@ -2,17 +2,33 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta
       name="description"
       content="El Diario de Wit es un espacio donde un jugador de TTRPGs lleva un registro del diario de sus partidas"
     />
     <title>Diario de Wit</title>
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./favicon.ico"
+    />
 
-    <meta property="og:title" content="El Diario de Wit" />
-    <meta property="og:description" content="Diarios de partidas de rol" />
-    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="El Diario de Wit"
+    />
+    <meta
+      property="og:description"
+      content="Diarios de partidas de rol"
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
     <meta
       property="og:url"
       content="https://joseignaciols.github.io/diario-de-wit/"
@@ -21,17 +37,40 @@
       property="og:image"
       content="https://joseignaciols.github.io/diario-de-wit/assets/imgs/loaderror.webp"
     />
-    <meta property="og:image:width" content="247" />
-    <meta property="og:image:height" content="264" />
-    <meta property="og:site_name" content="Diario de Wit" />
-    <meta property="og:locale" content="es_ES" />
+    <meta
+      property="og:image:width"
+      content="247"
+    />
+    <meta
+      property="og:image:height"
+      content="264"
+    />
+    <meta
+      property="og:site_name"
+      content="Diario de Wit"
+    />
+    <meta
+      property="og:locale"
+      content="es_ES"
+    />
 
-    <link rel="stylesheet" href="styles.css" />
-    <script defer type="module">
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <script
+      defer
+      type="module"
+    >
       import { renderGameList } from "./js/render.js";
-      renderGameList();
+      import { games } from "./assets/data/games.js";
+      renderGameList(games);
     </script>
-    <script src="./js/navigation.js" defer type="module"></script>
+    <script
+      src="./js/navigation.js"
+      defer
+      type="module"
+    ></script>
   </head>
 
   <body>

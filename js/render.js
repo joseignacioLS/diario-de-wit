@@ -1,20 +1,18 @@
 import { sortSessions } from "./utils.js";
 import { createElement, createImage } from "./dom.js";
 
-export const renderGameList = () => {
+export const renderGameList = (games) => {
     const gamesListElement = document.querySelector('#games-list');
     if (!gamesListElement) return;
-    import("../assets/data/games.js").then(({ games }) => {
-        games.forEach(game => {
-            const listItem = createElement('li');
-            const linkItem = createElement('a', {
-                href: game.url ?? "", class: "interactive-card",
-                textContent: game.title,
-                ariaDisabled: game.url === undefined
-            });
-            listItem.appendChild(linkItem);
-            gamesListElement.appendChild(listItem);
+    games.forEach(game => {
+        const listItem = createElement('li');
+        const linkItem = createElement('a', {
+            href: game.url ?? "", class: "interactive-card",
+            textContent: game.title,
+            ariaDisabled: game.url === undefined
         });
+        listItem.appendChild(linkItem);
+        gamesListElement.appendChild(listItem);
     });
 };
 
