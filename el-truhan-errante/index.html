@@ -62,21 +62,10 @@
       defer
       type="module"
     >
-      import { renderDiary } from "../js/render.js";
+      import { renderDiary, addSortListener } from "../js/render.js";
       const diary = "el-truhan-errante";
       renderDiary(diary);
-
-      document.querySelector("#sort").addEventListener("click", (e) => {
-        if (e.target.dataset.sort === "desc") {
-          e.target.dataset.sort = "asc";
-          e.target.innerHTML = "Ascendente";
-          renderDiary(diary, true);
-        } else {
-          e.target.dataset.sort = "desc";
-          e.target.innerHTML = "Descendente";
-          renderDiary(diary, false);
-        }
-      });
+      addSortListener(diary);
     </script>
     <script
       src="../js/navigation.js"
@@ -88,16 +77,25 @@
   <body class="with-aside">
     <header>
       <a href="/">Atrás</a>
-      <h1>El Truhan Errante</h1>
-    </header>
-    <aside>
-      <nav>
+      <h1>
+        El Truhan Errante
         <button
           id="sort"
           data-sort="desc"
+          class="sort-btn"
+          name="ordenar"
         >
-          Descendente
+          <img
+            src="../assets/icons/sort-ascending.svg"
+            alt="Icono de cambiar orden"
+            height="32"
+            width="32"
+          />
         </button>
+      </h1>
+    </header>
+    <aside>
+      <nav>
         <ul id="menu-list"></ul>
       </nav>
     </aside>

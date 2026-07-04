@@ -127,3 +127,18 @@ export const renderDiary = async (name, asc = false) => {
     renderDiaryEntries(sortedSessions, name);
     renderDiaryMenu(sortedSessions);
 };
+
+
+export const addSortListener = (diary) => {
+    document.querySelector("#sort")?.addEventListener("click", (e) => {
+        if (e.currentTarget.dataset.sort === "desc") {
+            e.currentTarget.dataset.sort = "asc";
+            e.target.src = "../assets/icons/sort-descending.svg";
+            renderDiary(diary, true);
+        } else {
+            e.currentTarget.dataset.sort = "desc";
+            e.target.src = "../assets/icons/sort-ascending.svg";
+            renderDiary(diary, false);
+        }
+    });
+};
