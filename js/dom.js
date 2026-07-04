@@ -1,22 +1,31 @@
 
 export const createImage = (src, caption, alt) => {
-  const figureElement = createElement("figure");
+  const pictureElement = createElement("picture");
+
+  src.forEach(({ src, media }) => {
+    const sourceElement = createElement("source", {
+      media,
+      srcset: src,
+    });
+    pictureElement.appendChild(sourceElement);
+  });
+
 
   const imgElement = createElement("img", {
-    src: src,
+    src: src.find(i => i.default).src,
     alt: alt,
     onerror: () => {
       imgElement.src = "../assets/imgs/loaderror.webp";
     }
   });
-  figureElement.appendChild(imgElement);
+  pictureElement.appendChild(imgElement);
   if (caption) {
     const captionElement = createElement("figcaption", {
       innerHTML: caption
     });
-    figureElement.appendChild(captionElement);
+    pictureElement.appendChild(captionElement);
   }
-  return figureElement;
+  return pictureElement;
 };
 
 

@@ -68,7 +68,7 @@ const generateSessionArticle = (session, diary) => {
     session.body.forEach((entry) => {
         if (entry.type === "img") {
             const imgElement = createImage(
-                `../assets/imgs/${diary}${entry.src}`,
+                entry.src,
                 entry.caption,
                 entry.alt
             );
