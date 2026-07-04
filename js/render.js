@@ -1,19 +1,31 @@
 import { sortSessions } from "./utils.js";
 import { createElement, createImage } from "./dom.js";
 
+
+const generateGameDate = (startDate, endDate) => {
+    if (!startDate || !endDate) return "?";
+    if (startDate === endDate) return startDate;
+    return `${startDate} - ${endDate}`;
+};
+
 export const renderGameList = (games) => {
     const gamesListElement = document.querySelector('#games-list');
     if (!gamesListElement) return;
-    games.forEach(game => {
-        const listItem = createElement('li');
-        const linkItem = createElement('a', {
-            href: game.url ?? "", class: "interactive-card",
-            textContent: game.title,
-            ariaDisabled: game.url === undefined
+    games
+        .sort((a, b) => {
+            return a.order - b.order;
+        })
+        .forEach(game => {
+            const listItem = createElement('li');
+            const gameDate = generateGameDate(game.startDate, game.endDate);
+            const linkItem = createElement('a', {
+                href: game.url ?? "", class: "interactive-card",
+                textContent: `${game.title} ${gameDate ? `(${gameDate})` : ""}`,
+                ariaDisabled: game.url === undefined
+            });
+            listItem.appendChild(linkItem);
+            gamesListElement.appendChild(listItem);
         });
-        listItem.appendChild(linkItem);
-        gamesListElement.appendChild(listItem);
-    });
 };
 
 
