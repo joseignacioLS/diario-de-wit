@@ -1,32 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 
 :root {
-    --color-fg: #f5f5f5;
-    --color-bg: #1a1a1a;
-    --color-accent: #ff6f61;
+  --color-fg: #f5f5f5;
+  --color-bg: #1a1a1a;
+  --color-accent: #ff6f61;
+  --color-accent-50: #ff6e6175;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
-    line-height: 3.5ch;
-    scroll-behavior: smooth;
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  line-height: 3.5ch;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  height: 100%;
+  overflow: hidden;
 }
 
 main,
 header,
 footer {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 8px 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 8px 16px;
 }
 
 h1,
@@ -36,91 +39,111 @@ h4,
 p,
 a,
 ul {
-    margin-bottom: min(1lh, 18px);
+  margin-bottom: min(1lh, 18px);
 }
 
 a,
 a:visited {
-    color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 a[aria-disabled="true"] {
-    opacity: .5;
-    pointer-events: none;
-    cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
 }
 
 body.with-aside {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: auto 1fr auto;
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    ". header"
+    "aside main"
+    "footer footer";
+
+  header {
+    grid-area: header;
+  }
+
+  @media (width <=1024px) {
+    grid-template-columns: 1fr;
     grid-template-areas:
-        ". header"
-        "aside main"
-        "footer footer";
-
-    header {
-        grid-area: header;
-    }
-
-    @media (width <=1024px) {
-        grid-template-columns: 1fr;
-        grid-template-areas: "header"
-            "main"
-            "footer";
-
-        aside {
-            display: none;
-        }
-    }
+      "header"
+      "main"
+      "footer";
 
     aside {
-        grid-area: aside;
-        position: sticky;
-        top: 0;
-        height: fit-content;
-        max-height: 100dvh;
-        line-height: 2ch;
-        overflow-y: auto;
-
-        padding: 8px 16px;
-
-        ul {
-            list-style: none;
-
-            li {
-                margin-bottom: 8px;
-            }
-        }
+      display: none;
     }
+  }
 
-    header {
-        width: 100%;
-    }
+  aside {
+    grid-area: aside;
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    height: 100%;
+    line-height: 2ch;
+    overflow-y: auto;
 
-    main {
-        grid-area: main;
-    }
+    padding: 8px 16px;
 
-    footer {
-        grid-area: footer;
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 4px;
+      }
     }
+  }
+
+  header {
+    width: 100%;
+  }
+
+  main {
+    grid-area: main;
+    height: 100%;
+    overflow: auto;
+  }
+
+  footer {
+    grid-area: footer;
+  }
 }
 
 article.session {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 
-    .title {
-        margin-bottom: 0px;
-        border-bottom: 1px solid var(--color-fg);
-    }
+  .title {
+    margin-bottom: 0px;
+    border-bottom: 1px solid var(--color-fg);
+  }
 
-    img {
-        max-width: 100%;
-        max-height: 90dvh;
-    }
+  img {
+    max-width: 100%;
+    max-height: 90dvh;
+  }
 
-    figcaption {
-        font-style: italic;
-    }
+  figcaption {
+    font-style: italic;
+  }
+}
+
+.interactive-card {
+  width: 100%;
+  display: inline-block;
+  background-color: var(--colog-bg);
+  border-radius: 8px;
+  margin-bottom: 0;
+  padding: 4px 8px;
+  border: 2px solid var(--color-accent-50);
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0px 0px 4px 4px var(--color-accent-50);
+    z-index: 1;
+  }
 }

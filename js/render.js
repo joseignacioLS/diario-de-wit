@@ -8,7 +8,7 @@ export const renderGameList = () => {
         games.forEach(game => {
             const listItem = createElement('li');
             const linkItem = createElement('a', {
-                href: game.url ?? "",
+                href: game.url ?? "", class: "interactive-card",
                 textContent: game.title,
                 ariaDisabled: game.url === undefined
             });
@@ -38,7 +38,8 @@ const renderDiaryMenu = (sessions) => {
             const liElement = createElement("li");
             const aElement = createElement("a", {
                 href: `#arc-${session.arc ?? 1}-sesion-${session.session}`,
-                textContent: `#${session.session} ${session.title}`
+                textContent: `#${session.session} ${session.title}`,
+                class: "interactive-card"
             });
             liElement.appendChild(aElement);
             arcUlElement.appendChild(liElement);
