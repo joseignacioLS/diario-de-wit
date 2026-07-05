@@ -4,6 +4,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  height: 100%;
+  overflow: auto;
 
   @media (width <=1024px) {
     grid-template-columns: 1fr;
