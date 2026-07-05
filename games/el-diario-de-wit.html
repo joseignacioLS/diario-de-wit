@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Por desgracia el diario de Wit original se ha perdido en el tiempo. Tengo algunas cosas sueltas, pero no para recomponer la campaña que jugué en su momento."
+    />
+    <title>El Diario de Wit</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../favicon.ico"
+    />
+
+    <meta
+      property="og:title"
+      content="Por desgracia el diario de Wit original se ha perdido en el tiempo. Tengo algunas cosas sueltas, pero no para recomponer la campaña que jugué en su momento. - El Truhan Errante"
+    />
+    <meta
+      property="og:description"
+      content="Por desgracia el diario de Wit original se ha perdido en el tiempo. Tengo algunas cosas sueltas, pero no para recomponer la campaña que jugué en su momento."
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="https://joseignaciols.github.io/diario-de-wit/games/el-diario-de-wit.html"
+    />
+    <meta
+      property="og:image"
+      content="https://joseignaciols.github.io/diario-de-wit/assets/imgs/loaderror.webp"
+    />
+    <meta
+      property="og:image:width"
+      content="247"
+    />
+    <meta
+      property="og:image:height"
+      content="264"
+    />
+    <meta
+      property="og:site_name"
+      content="Diario de Wit"
+    />
+    <meta
+      property="og:locale"
+      content="es_ES"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../globals.css"
+    />
+    <script
+      defer
+      type="module"
+    >
+      import { renderDiary, addSortListener } from "../js/render.js";
+      const diary = "el-diario-de-wit";
+      renderDiary(diary);
+    </script>
+    <script
+      src="../js/navigation.js"
+      type="module"
+      defer
+    ></script>
+  </head>
+
+  <body class="with-aside">
+    <header>
+      <a href="/">Atrás</a>
+      <h1>
+        El Diario de Wit
+        <button
+          id="sort"
+          data-sort="desc"
+          class="sort-btn"
+          name="ordenar"
+        >
+          <img
+            src="../assets/icons/sort-ascending.svg"
+            alt="Icono de cambiar orden"
+            height="32"
+            width="32"
+          />
+        </button>
+      </h1>
+    </header>
+    <aside>
+      <nav>
+        <ul id="menu-list"></ul>
+      </nav>
+    </aside>
+    <main>
+      <h2 class="title-with-border">Resumen</h2>
+      <p>Por desgracia el diario de Wit original se ha perdido en el tiempo. Tengo algunas cosas sueltas, pero no para recomponer la campaña que jugué en su momento.</p>
+      <h2 class="title-with-border">Sesiones</h2>
+      <section id="sessions"></section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -124,7 +124,7 @@ const resetRender = () => {
 };
 
 export const reorderDiary = async (name, asc = false) => {
-    import("../" + name + "/data.js").then(({ sessions }) => {
+    import("../assets/data/games/" + name + ".js").then(({ sessions }) => {
         resetRender();
         if (!sessions) return;
         const sortedSessions = sortSessions(sessions, asc);
@@ -135,7 +135,7 @@ export const reorderDiary = async (name, asc = false) => {
 
 
 export const renderDiary = async (name) => {
-    import("../" + name + "/data.js").then(({ sessions }) => {
+    import("../assets/data/games/" + name + ".js").then(({ sessions }) => {
         resetRender();
         if (!sessions) return;
         const sortedSessions = sortSessions(sessions, false);

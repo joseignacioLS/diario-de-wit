@@ -107,6 +107,7 @@ body.with-aside {
   }
 
   main {
+    width: 100%;
     grid-area: main;
     height: 100%;
     overflow: auto;
