@@ -109,23 +109,40 @@ const renderDiaryEntries = (sessions, diary) => {
 
 const resetRender = () => {
     const menuListElement = document.querySelector("#menu-list");
-    const sessionsElement = document.querySelector("#sessions");
     if (menuListElement) {
         menuListElement.innerHTML = "";
     }
+    const sessionsElement = document.querySelector("#sessions");
     if (sessionsElement) {
         sessionsElement.innerHTML = "";
     }
+
+    const sortBtnElement = document.querySelector("#sort-btn");
+    if (sortBtnElement) {
+        sortBtnElement.removeEventListener("click");
+    }
+};
+
+export const reorderDiary = async (name, asc = false) => {
+    import("../" + name + "/data.js").then(({ sessions }) => {
+        resetRender();
+        if (!sessions) return;
+        const sortedSessions = sortSessions(sessions, asc);
+        renderDiaryEntries(sortedSessions, name);
+        renderDiaryMenu(sortedSessions);
+    });
 };
 
 
-export const renderDiary = async (name, asc = false) => {
-    resetRender();
-    const sessions = await import("../" + name + "/data.js").then(m => m.sessions);
-    if (!sessions) return;
-    const sortedSessions = sortSessions(sessions, asc);
-    renderDiaryEntries(sortedSessions, name);
-    renderDiaryMenu(sortedSessions);
+export const renderDiary = async (name) => {
+    import("../" + name + "/data.js").then(({ sessions }) => {
+        resetRender();
+        if (!sessions) return;
+        const sortedSessions = sortSessions(sessions, false);
+        renderDiaryEntries(sortedSessions, name);
+        renderDiaryMenu(sortedSessions);
+        addSortListener(name);
+    });
 };
 
 
@@ -134,11 +151,11 @@ export const addSortListener = (diary) => {
         if (e.currentTarget.dataset.sort === "desc") {
             e.currentTarget.dataset.sort = "asc";
             e.target.src = "../assets/icons/sort-descending.svg";
-            renderDiary(diary, true);
+            reorderDiary(diary, true);
         } else {
             e.currentTarget.dataset.sort = "desc";
             e.target.src = "../assets/icons/sort-ascending.svg";
-            renderDiary(diary, false);
+            reorderDiary(diary, false);
         }
     });
 };
