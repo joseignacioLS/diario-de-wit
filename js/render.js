@@ -104,7 +104,7 @@ const resetRender = () => {
 };
 
 export const reorderDiary = async (name, asc = false) => {
-    import("../assets/data/games/" + name + ".js").then(({ sessions }) => {
+    import("../../assets/data/games/" + name + ".js").then(({ sessions }) => {
         resetRender();
         if (!sessions) return;
         const sortedSessions = sortSessions(sessions, asc);
@@ -115,7 +115,7 @@ export const reorderDiary = async (name, asc = false) => {
 
 
 export const renderDiary = async (name) => {
-    import("../assets/data/games/" + name + ".js").then(({ sessions }) => {
+    import("../../assets/data/games/" + name + ".js").then(({ sessions }) => {
         resetRender();
         if (!sessions) return;
         const sortedSessions = sortSessions(sessions, false);
@@ -130,11 +130,11 @@ export const addSortListener = (diary) => {
     document.querySelector("#sort")?.addEventListener("click", (e) => {
         if (e.currentTarget.dataset.sort === "desc") {
             e.currentTarget.dataset.sort = "asc";
-            e.target.src = "../assets/icons/sort-descending.svg";
+            e.target.src = "../../assets/icons/sort-descending.svg";
             reorderDiary(diary, true);
         } else {
             e.currentTarget.dataset.sort = "desc";
-            e.target.src = "../assets/icons/sort-ascending.svg";
+            e.target.src = "../../assets/icons/sort-ascending.svg";
             reorderDiary(diary, false);
         }
     });

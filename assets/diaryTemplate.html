@@ -18,13 +18,13 @@
   <meta property="og:site_name" content="Diario de Wit" />
   <meta property="og:locale" content="es_ES" />
 
-  <link rel="stylesheet" href="../css/globals.css" />
+  <link rel="stylesheet" href="../../css/globals.css" />
   <script defer type="module">
-    import { renderDiary, addSortListener } from "../js/render.js";
+    import { renderDiary, addSortListener } from "../../js/render.js";
     const diary = "item:tag";
     renderDiary(diary);
   </script>
-  <script src="../js/navigation.js" type="module" defer></script>
+  <script src="../../js/navigation.js" type="module" defer></script>
 </head>
 
 <body class="with-aside">
@@ -33,7 +33,7 @@
     <h1 style="view-transition-name: title-item:tag">
       item:title
       <button id="sort" data-sort="desc" class="sort-btn" name="ordenar">
-        <img src="../assets/icons/sort-ascending.svg" alt="Icono de cambiar orden" height="32" width="32" />
+        <img src="../../assets/icons/sort-ascending.svg" alt="Icono de cambiar orden" height="32" width="32" />
       </button>
     </h1>
   </header>

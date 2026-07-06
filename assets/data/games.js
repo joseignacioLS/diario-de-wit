@@ -7,7 +7,7 @@ export const games = [
     {
         title: "El Truhan Errante",
         tag: "el-truhan-errante",
-        url: "/games/el-truhan-errante.html",
+        url: "/games/el-truhan-errante",
         startDate: "2025",
         endDate: "Actualidad",
         order: 1,
@@ -17,7 +17,7 @@ export const games = [
     {
         title: "Kuzo",
         tag: "kuzo",
-        url: "/games/kuzo.html",
+        url: "/games/kuzo",
         startDate: "2025",
         endDate: "2025",
         order: 2,
@@ -27,7 +27,7 @@ export const games = [
     {
         title: "La Escupidera",
         tag: "la-escupidera",
-        url: "/games/la-escupidera.html",
+        url: "/games/la-escupidera",
         startDate: "2020",
         endDate: "2024",
         order: 3,
@@ -37,7 +37,7 @@ export const games = [
     {
         title: "El Diario de Wit",
         tag: "el-diario-de-wit",
-        url: "/games/el-diario-de-wit.html",
+        url: "/games/el-diario-de-wit",
         startDate: "2010",
         endDate: "?",
         order: 4,

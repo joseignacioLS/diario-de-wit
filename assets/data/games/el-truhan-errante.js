@@ -5,9 +5,9 @@ export const sessions = [
         body: [{
             type: "img",
             src: [
-                { src: "../assets/imgs/el-truhan-errante/Sesion01-256.webp", media: `(width <= 256px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion01-512.webp", media: `(width <= 512px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion01.webp", media: `(width > 512px)`, default: true }
+                { src: "../../assets/imgs/el-truhan-errante/Sesion01-256.webp", media: `(width <= 256px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion01-512.webp", media: `(width <= 512px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion01.webp", media: `(width > 512px)`, default: true }
             ],
             alt: "Fotografía de la primera página del diario del Truhan Errante",
             caption: undefined
@@ -19,9 +19,9 @@ export const sessions = [
         body: [{
             type: "img",
             src: [
-                { src: "../assets/imgs/el-truhan-errante/Sesion02-256.webp", media: `(width <= 256px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion02-512.webp", media: `(width <= 512px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion02.webp", media: `(width > 512px)`, default: true }
+                { src: "../../assets/imgs/el-truhan-errante/Sesion02-256.webp", media: `(width <= 256px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion02-512.webp", media: `(width <= 512px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion02.webp", media: `(width > 512px)`, default: true }
             ],
             alt: "Fotografía de la segunda página del diario del Truhan Errante",
             caption: undefined
@@ -33,9 +33,9 @@ export const sessions = [
         body: [{
             type: "img",
             src: [
-                { src: "../assets/imgs/el-truhan-errante/Sesion03-256.webp", media: `(width <= 256px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion03-512.webp", media: `(width <= 512px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion03.webp", media: `(width > 512px)`, default: true }
+                { src: "../../assets/imgs/el-truhan-errante/Sesion03-256.webp", media: `(width <= 256px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion03-512.webp", media: `(width <= 512px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion03.webp", media: `(width > 512px)`, default: true }
             ],
             alt: "Fotografía de la tercera página del diario del Truhan Errante",
             caption: undefined
@@ -47,9 +47,9 @@ export const sessions = [
         body: [{
             type: "img",
             src: [
-                { src: "../assets/imgs/el-truhan-errante/Sesion04-256.webp", media: `(width <= 256px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion04-512.webp", media: `(width <= 512px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion04.webp", media: `(width > 512px)`, default: true }
+                { src: "../../assets/imgs/el-truhan-errante/Sesion04-256.webp", media: `(width <= 256px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion04-512.webp", media: `(width <= 512px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion04.webp", media: `(width > 512px)`, default: true }
             ],
             alt: "Fotografía de la cuarta página del diario del Truhan Errante",
             caption: undefined
@@ -61,9 +61,9 @@ export const sessions = [
         body: [{
             type: "img",
             src: [
-                { src: "../assets/imgs/el-truhan-errante/Sesion05-256.webp", media: `(width <= 256px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion05-512.webp", media: `(width <= 512px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion05.webp", media: `(width > 512px)`, default: true }
+                { src: "../../assets/imgs/el-truhan-errante/Sesion05-256.webp", media: `(width <= 256px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion05-512.webp", media: `(width <= 512px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion05.webp", media: `(width > 512px)`, default: true }
             ],
             alt: "Fotografía de la quinta página del diario del Truhan Errante",
             caption: undefined
@@ -75,9 +75,9 @@ export const sessions = [
         body: [{
             type: "img",
             src: [
-                { src: "../assets/imgs/el-truhan-errante/Sesion06-256.webp", media: `(width <= 256px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion06-512.webp", media: `(width <= 512px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion06.webp", media: `(width > 512px)`, default: true }
+                { src: "../../assets/imgs/el-truhan-errante/Sesion06-256.webp", media: `(width <= 256px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion06-512.webp", media: `(width <= 512px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion06.webp", media: `(width > 512px)`, default: true }
             ],
             alt: "Fotografía de la sexta página del diario del Truhan Errante",
             caption: undefined
@@ -89,9 +89,9 @@ export const sessions = [
         body: [{
             type: "img",
             src: [
-                { src: "../assets/imgs/el-truhan-errante/Sesion07-256.webp", media: `(width <= 256px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion07-512.webp", media: `(width <= 512px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion07.webp", media: `(width > 512px)`, default: true }
+                { src: "../../assets/imgs/el-truhan-errante/Sesion07-256.webp", media: `(width <= 256px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion07-512.webp", media: `(width <= 512px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion07.webp", media: `(width > 512px)`, default: true }
             ],
             alt: "Fotografía de la séptima página del diario del Truhan Errante",
             caption: undefined
@@ -111,9 +111,9 @@ export const sessions = [
         body: [{
             type: "img",
             src: [
-                { src: "../assets/imgs/el-truhan-errante/Sesion09-256.webp", media: `(width <= 256px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion09-512.webp", media: `(width <= 512px)` },
-                { src: "../assets/imgs/el-truhan-errante/Sesion09.webp", media: `(width > 512px)`, default: true }
+                { src: "../../assets/imgs/el-truhan-errante/Sesion09-256.webp", media: `(width <= 256px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion09-512.webp", media: `(width <= 512px)` },
+                { src: "../../assets/imgs/el-truhan-errante/Sesion09.webp", media: `(width > 512px)`, default: true }
             ],
             alt: "Fotografía de la novena página del diario del Truhan Errante",
             caption: undefined
