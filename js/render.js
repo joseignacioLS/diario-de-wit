@@ -1,33 +1,13 @@
 import { sortSessions } from "./utils.js";
 import { createElement, createImage } from "./dom.js";
+import { games } from "../assets/data/games.js";
 
 
-const generateGameDate = (startDate, endDate) => {
+export const generateGameDate = (startDate, endDate) => {
     if (!startDate || !endDate) return "?";
     if (startDate === endDate) return startDate;
     return `${startDate} - ${endDate}`;
 };
-
-export const renderGameList = (games) => {
-    const gamesListElement = document.querySelector('#games-list');
-    if (!gamesListElement) return;
-    games
-        .sort((a, b) => {
-            return a.order - b.order;
-        })
-        .forEach(game => {
-            const listItem = createElement('li');
-            const gameDate = generateGameDate(game.startDate, game.endDate);
-            const linkItem = createElement('a', {
-                href: game.url ?? "", class: "interactive-card",
-                textContent: `${game.title} ${gameDate ? `(${gameDate})` : ""}`,
-                ariaDisabled: game.url === undefined
-            });
-            listItem.appendChild(linkItem);
-            gamesListElement.appendChild(listItem);
-        });
-};
-
 
 const renderDiaryMenu = (sessions) => {
     const ulElement = document.querySelector("#menu-list");

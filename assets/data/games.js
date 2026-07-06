@@ -12,7 +12,7 @@ export const games = [
         endDate: "Actualidad",
         order: 1,
         summary: "El Truhan Errante es el nombre del barco en el que Cornelio Tramontana, en el puerto de Marea Baja. El capitán Damián ha encomendado a Cornelio, junto a sus compañeros Rufus y Silvestre, que pongan a la tripulación del Truhan Errante de vuelta en altamar, consiguiendo una reparación... o quizás un nuevo barco.",
-        session: ElTruhanErrante
+        sessions: ElTruhanErrante
     },
     {
         title: "Kuzo",

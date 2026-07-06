@@ -38,7 +38,8 @@ export const createElement = (tag, attrs = {}) => {
       for (const [styleKey, styleValue] of Object.entries(value)) {
         element.style[styleKey] = styleValue;
       }
-    } else {
+    }
+    else {
       element[key] = value;
     }
   }
