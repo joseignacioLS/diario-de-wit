@@ -109,7 +109,7 @@ const resetRender = () => {
 };
 
 export const reorderDiary = async (name, asc = false) => {
-    import("../../assets/data/games/" + name + ".js").then(({ sessions }) => {
+    import("../assets/data/games/" + name + ".js").then(({ sessions }) => {
         resetRender();
         if (!sessions) return;
         const sortedSessions = sortSessions(sessions, asc);
@@ -120,7 +120,7 @@ export const reorderDiary = async (name, asc = false) => {
 
 
 export const renderDiary = async (name) => {
-    import("../../assets/data/games/" + name + ".js").then(({ sessions }) => {
+    import("../assets/data/games/" + name + ".js").then(({ sessions }) => {
         resetRender();
         if (!sessions) return;
         const sortedSessions = sortSessions(sessions, false);
