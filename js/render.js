@@ -48,7 +48,12 @@ const generateSessionArticle = (session, diary) => {
     session.body.forEach((entry) => {
         if (entry.type === "img") {
             const imgElement = createImage(
-                entry.src,
+                entry.src.map(entry => {
+                    return {
+                        ...entry,
+                        src: entry.src.replace("@", "../..")
+                    }
+                }),
                 entry.caption,
                 entry.alt
             );

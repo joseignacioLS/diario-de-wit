@@ -22,8 +22,8 @@ export const sessions = [
             {
                 type: "img",
                 src: [
-                    { src: "../../assets/imgs/la-escupidera/oro-320.webp", media: `(width <= 320px)` },
-                    { src: "../../assets/imgs/la-escupidera/oro.webp", media: `(width > 320)`, default: true },
+                    { src: "@/assets/imgs/la-escupidera/oro-320.webp", media: `(width <= 320px)` },
+                    { src: "@/assets/imgs/la-escupidera/oro.webp", media: `(width > 320)`, default: true },
                 ],
                 alt: "Dibujo de una persona levantando una pepita de oro y exclamando '¡Oro!'"
             },
@@ -41,8 +41,8 @@ export const sessions = [
             {
                 type: "img",
                 src: [
-                    { src: "../../assets/imgs/la-escupidera/wops-320.webp", media: `(width <= 320px)` },
-                    { src: "../../assets/imgs/la-escupidera/wops.webp", media: `(width > 320)`, default: true },
+                    { src: "@/assets/imgs/la-escupidera/wops-320.webp", media: `(width <= 320px)` },
+                    { src: "@/assets/imgs/la-escupidera/wops.webp", media: `(width > 320)`, default: true },
                 ],
                 alt: "Dibujo de una persona que se cae al resbalar con un excremento"
             },
