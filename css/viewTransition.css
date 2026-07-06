@@ -1,0 +1,18 @@
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.3s;
+}
+
+::view-transition-old(body) {
+    animation: 0.25s ease-in both fade-out, 0.25s ease-in both scale-down;
+}
+
+::view-transition-new(body) {
+    animation: 0.3s ease-out both fade-in, 0.3s ease-out both scale-up;
+}
