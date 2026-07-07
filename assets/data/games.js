@@ -1,7 +1,7 @@
-import { sessions as ElDiarioDeWit } from "./games/el-diario-de-wit.js";
-import { sessions as ElTruhanErrante } from "./games/el-truhan-errante.js";
-import { sessions as Kuzo } from "./games/kuzo.js";
-import { sessions as LaEscupidera } from "./games/la-escupidera.js";
+import { sessions as ElDiarioDeWit } from "./sessions/el-diario-de-wit.js";
+import { sessions as ElTruhanErrante } from "./sessions/el-truhan-errante.js";
+import { sessions as Kuzo } from "./sessions/kuzo.js";
+import { sessions as LaEscupidera } from "./sessions/la-escupidera.js";
 
 export const games = [
     {

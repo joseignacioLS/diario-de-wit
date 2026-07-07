@@ -1,5 +1,6 @@
 export const sessions = [
     {
+        arc: 1,
         session: 1,
         title: "De vuelta a la termita",
         body: [{
@@ -14,6 +15,7 @@ export const sessions = [
         }]
     },
     {
+        arc: 1,
         session: 2,
         title: "Rubén Hernández, empresario",
         body: [{
@@ -28,6 +30,7 @@ export const sessions = [
         }]
     },
     {
+        arc: 1,
         session: 3,
         title: "A su servicio, Herrete",
         body: [{
@@ -42,6 +45,7 @@ export const sessions = [
         }]
     },
     {
+        arc: 1,
         session: 4,
         title: "¿Rubén o Javier?",
         body: [{
@@ -56,6 +60,7 @@ export const sessions = [
         }]
     },
     {
+        arc: 1,
         session: 5,
         title: "¡Javier!",
         body: [{
@@ -70,6 +75,7 @@ export const sessions = [
         }]
     },
     {
+        arc: 1,
         session: 6,
         title: "Gallardo, (asistente del) Rey de los Corsarios",
         body: [{
@@ -84,6 +90,7 @@ export const sessions = [
         }]
     },
     {
+        arc: 1,
         session: 7,
         title: "Oh mi capitán",
         body: [{
@@ -98,6 +105,7 @@ export const sessions = [
         }]
     },
     {
+        arc: 1,
         session: 8,
         title: "Sin registro",
         body: [{
@@ -106,6 +114,7 @@ export const sessions = [
         }]
     },
     {
+        arc: 1,
         session: 9,
         title: "El plan",
         body: [{

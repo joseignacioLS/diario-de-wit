@@ -1,5 +1,6 @@
 export const sessions = [
     {
+        arc: 1,
         session: 0,
         title: "Trasfondo",
         body: [
@@ -17,6 +18,7 @@ export const sessions = [
         ]
     },
     {
+        arc: 1,
         session: 1,
         title: "Un nuevo grupo",
         body: [
@@ -42,6 +44,7 @@ export const sessions = [
             }]
     },
     {
+        arc: 1,
         session: 2,
         title: "Adentrándose en lo desconocido",
         body: [
@@ -58,6 +61,7 @@ export const sessions = [
         ]
     },
     {
+        arc: 1,
         session: 3,
         title: "Adiós",
         body: [

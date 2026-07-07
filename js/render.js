@@ -28,7 +28,7 @@ const renderDiaryMenu = (sessions) => {
             const liElement = createElement("li");
             const aElement = createElement("a", {
                 href: `#arc-${session.arc ?? 1}-sesion-${session.session}`,
-                textContent: `#${session.session} ${session.title}`,
+                textContent: `${session.session} - ${session.title}`,
                 class: "interactive-card"
             });
             liElement.appendChild(aElement);
@@ -40,7 +40,7 @@ const generateSessionArticle = (session, diary) => {
     const articleElement = createElement("article", { class: "session" });
     const titleElement = createElement("h4", {
         class: "title",
-        textContent: `#${session.arc ? session.arc + "." : ""}${session.session} ${session.title}`,
+        textContent: `${session.arc ? session.arc + "." : ""}${session.session} - ${session.title}`,
         id: `arc-${session.arc ?? 1}-sesion-${session.session}`
     });
     articleElement.appendChild(titleElement);
@@ -109,25 +109,23 @@ const resetRender = () => {
 };
 
 export const reorderDiary = async (name, asc = false) => {
-    import("../assets/data/games/" + name + ".js").then(({ sessions }) => {
-        resetRender();
-        if (!sessions) return;
-        const sortedSessions = sortSessions(sessions, asc);
-        renderDiaryEntries(sortedSessions, name);
-        renderDiaryMenu(sortedSessions);
-    });
+    const sessions = games.find(({ tag }) => tag === name)?.sessions
+    resetRender();
+    if (!sessions) return;
+    const sortedSessions = sortSessions(sessions, asc);
+    renderDiaryEntries(sortedSessions, name);
+    renderDiaryMenu(sortedSessions);
 };
 
 
 export const renderDiary = async (name) => {
-    import("../assets/data/games/" + name + ".js").then(({ sessions }) => {
-        resetRender();
-        if (!sessions) return;
-        const sortedSessions = sortSessions(sessions, false);
-        renderDiaryEntries(sortedSessions, name);
-        renderDiaryMenu(sortedSessions);
-        addSortListener(name);
-    });
+    const sessions = games.find(({ tag }) => tag === name)?.sessions
+    resetRender();
+    if (!sessions) return;
+    const sortedSessions = sortSessions(sessions, false);
+    renderDiaryEntries(sortedSessions, name);
+    renderDiaryMenu(sortedSessions);
+    addSortListener(name);
 };
 
 
