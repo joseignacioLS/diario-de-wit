@@ -131,7 +131,7 @@ export const sessions = [
     {
         arc: 1,
         session: 10,
-        title: "Pelease clandestinas aprobadas por el gobierno",
+        title: "Peleas clandestinas aprobadas por el gobierno",
         body: [{
             type: "img",
             src: [
