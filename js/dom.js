@@ -1,6 +1,11 @@
 
 export const createImage = (src, caption, alt) => {
+  const wrapperElement = createElement("div",
+    { class: "image-wrapper" }
+  );
   const pictureElement = createElement("picture");
+
+  wrapperElement.appendChild(pictureElement);
 
   src.forEach(({ src, media }) => {
     const sourceElement = createElement("source", {
@@ -25,7 +30,32 @@ export const createImage = (src, caption, alt) => {
     });
     pictureElement.appendChild(captionElement);
   }
-  return pictureElement;
+
+  // ZOOM
+
+  const zoomElement = createElement("div", {
+    style: {
+      backgroundImage: `url("${src.find(i => i.default).src}")`
+    },
+    class: "zoom-in",
+    ariaHidden: "true"
+  });
+
+  wrapperElement.addEventListener("mousemove", (e) => {
+    const x = e.clientX - (e.target.getBoundingClientRect()?.x ?? 0);
+    const y = e.clientY - (e.target.getBoundingClientRect()?.y ?? 0);
+
+    const w = Math.round(100 * x / e.target.offsetWidth);
+    const h = Math.round(100 * y / e.target.offsetHeight);
+
+    zoomElement.style.top = `${h}%`;
+    zoomElement.style.left = `${w}%`;
+
+    zoomElement.style.backgroundPosition = `${w + (w - 50) / 50 * 6}% ${h + (h - 50) / 50 * 6}%`;
+  });
+
+  wrapperElement.appendChild(zoomElement);
+  return wrapperElement;
 };
 
 
