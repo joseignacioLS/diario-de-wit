@@ -92,6 +92,20 @@ const renderDiaryEntries = (sessions, diary) => {
         });
 };
 
+export const renderTags = async (tags) => {
+    const tagsElement = document.querySelector("#tags");
+    console.log(tagsElement)
+    if (!tagsElement) return;
+
+    tags
+        .forEach(tag => {
+            const tagElement = createElement("li", {
+                innerHTML: tag
+            })
+            tagsElement.appendChild(tagElement);
+        });
+}
+
 const resetRender = () => {
     const menuListElement = document.querySelector("#menu-list");
     if (menuListElement) {
@@ -117,17 +131,16 @@ export const reorderDiary = async (name, asc = false) => {
     renderDiaryMenu(sortedSessions);
 };
 
-
 export const renderDiary = async (name) => {
-    const sessions = games.find(({ tag }) => tag === name)?.sessions
+    const { sessions, tags } = games.find(({ tag }) => tag === name) ?? { sessions: [], tags: [] }
     resetRender();
     if (!sessions) return;
     const sortedSessions = sortSessions(sessions, false);
     renderDiaryEntries(sortedSessions, name);
     renderDiaryMenu(sortedSessions);
+    renderTags(tags)
     addSortListener(name);
 };
-
 
 export const addSortListener = (diary) => {
     document.querySelector("#sort")?.addEventListener("click", (e) => {
