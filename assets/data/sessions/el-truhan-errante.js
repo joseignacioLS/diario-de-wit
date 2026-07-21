@@ -143,4 +143,19 @@ export const sessions = [
             caption: undefined
         }]
     },
+    {
+        arc: 1,
+        session: 11,
+        title: "El Rompeolas",
+        body: [{
+            type: "img",
+            src: [
+                { src: "@/assets/imgs/el-truhan-errante/Sesion11-256.webp", media: `(width <= 256px)` },
+                { src: "@/assets/imgs/el-truhan-errante/Sesion11-512.webp", media: `(width <= 512px)` },
+                { src: "@/assets/imgs/el-truhan-errante/Sesion11.webp", media: `(width > 512px)`, default: true }
+            ],
+            alt: "Fotografía de la décimo primera página del diario del Truhan Errante",
+            caption: undefined
+        }]
+    },
 ];
