@@ -200,7 +200,6 @@ button {
   overflow: hidden;
   width: fit-content;
   user-select: none;
-  cursor: pointer;
 
   picture,
   source,
@@ -209,24 +208,28 @@ button {
     pointer-events: none;
     cursor: pointer;
   }
-
-  &:active {
-    cursor: none;
+  @media (width >= 1024px) {
+    cursor: zoom-in;
+    &:active {
+      cursor: none;
+      .zoom-in {
+        display: block;
+      }
+    }
     .zoom-in {
-      display: block;
+      position: absolute;
+      width: 60%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      border: 1px solid var(--color-bg);
+      border-radius: 1000px;
+      pointer-events: none;
+      background-size: 600%;
     }
   }
 
   .zoom-in {
     display: none;
-    position: absolute;
-    width: 60%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    border: 1px solid var(--color-bg);
-    border-radius: 1000px;
-    pointer-events: none;
-    background-size: 600%;
   }
 }
