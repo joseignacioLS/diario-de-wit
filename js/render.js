@@ -83,9 +83,15 @@ const renderDiaryEntries = (sessions, diary) => {
             sessionsElement.appendChild(arcElement);
         }
     };
-
-    sessions
+    const sessionsToRender = sessions
         .filter(({ title }) => title !== undefined)
+
+    if (sessionsToRender.length < 1) {
+        sessionsElement.appendChild(createElement("p", {
+            textContent: "Aún no he registrado ninguna sesión de esta partida"
+        }))
+    }
+    sessionsToRender
         .forEach(session => {
             checkArc(session.arc ?? 1);
             sessionsElement.appendChild(generateSessionArticle(session, diary));

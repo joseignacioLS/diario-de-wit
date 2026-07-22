@@ -18,9 +18,9 @@ async function main() {
           return `
           <li>
             <a
-              href="${game.url}"
+              href="/games/${game.tag}"
               class="interactive-card"
-              aria-disabled="${game.url === undefined}"
+              aria-disabled="${game.tag === undefined}"
             >
               ${game.title} ${gameDate ? `(${gameDate})` : ""}
             </a>
@@ -48,7 +48,7 @@ async function main() {
       .replaceAll("item:title", game.title)
       .replaceAll("item:summary", game.summary)
       .replaceAll("item:description", game.summary)
-      .replaceAll("item:path", game.url)
+      .replaceAll("item:path", `/games/${game.tag}`)
       .replaceAll("item:tag", game.tag);
 
     await fs.writeFile(path.join(gameDir, "index.html"), gamePage);

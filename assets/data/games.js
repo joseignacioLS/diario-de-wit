@@ -5,9 +5,18 @@ import { sessions as LaEscupidera } from "./sessions/la-escupidera.js";
 
 export const games = [
     {
+        title: "El Festival de las Bestias",
+        tag: "festival-de-las-bestias",
+        startDate: "2026",
+        endDate: "Actualidad",
+        order: 1,
+        summary: "La pequeña ciudad de Elmore ha perdido su defensa contra las bestias. El grupo debe aventurarse en las cavernas para tratar de arreglar el sistema, ¡y cocinar deliciosas recetas!",
+        tags: ["GM", "DaggerHeart"],
+        sessions: []
+    },
+    {
         title: "El Truhan Errante",
         tag: "el-truhan-errante",
-        url: "/games/el-truhan-errante",
         startDate: "2025",
         endDate: "2026",
         order: 1,
@@ -18,7 +27,6 @@ export const games = [
     {
         title: "Kuzo",
         tag: "kuzo",
-        url: "/games/kuzo",
         startDate: "2025",
         endDate: "2025",
         order: 2,
@@ -29,7 +37,6 @@ export const games = [
     {
         title: "La Escupidera",
         tag: "la-escupidera",
-        url: "/games/la-escupidera",
         startDate: "2020",
         endDate: "2024",
         order: 3,
@@ -40,7 +47,6 @@ export const games = [
     {
         title: "El Diario de Wit",
         tag: "el-diario-de-wit",
-        url: "/games/el-diario-de-wit",
         startDate: "2010",
         endDate: "?",
         order: 4,
