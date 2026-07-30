@@ -84,12 +84,12 @@ const renderDiaryEntries = (sessions, diary) => {
         }
     };
     const sessionsToRender = sessions
-        .filter(({ title }) => title !== undefined)
+        .filter(({ title }) => title !== undefined);
 
     if (sessionsToRender.length < 1) {
         sessionsElement.appendChild(createElement("p", {
             textContent: "Aún no he registrado ninguna sesión de esta partida"
-        }))
+        }));
     }
     sessionsToRender
         .forEach(session => {
