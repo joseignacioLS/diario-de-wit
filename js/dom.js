@@ -51,7 +51,10 @@ export const createImage = (src, caption, alt) => {
     zoomElement.style.top = `${h}%`;
     zoomElement.style.left = `${w}%`;
 
-    zoomElement.style.backgroundPosition = `${w + (w - 50) / 50 * 6}% ${h + (h - 50) / 50 * 6}%`;
+    const factor = 12
+    const wi = w + (w - 50) / 50 * factor;
+    const he = h + (h - 50) / 50 * factor;
+    zoomElement.style.backgroundPosition = `${wi}% ${he}%`;
   });
 
   wrapperElement.appendChild(zoomElement);
