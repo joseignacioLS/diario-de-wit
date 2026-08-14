@@ -3,8 +3,19 @@ import { sessions as ElTruhanErrante } from "./sessions/el-truhan-errante.js";
 import { sessions as Kuzo } from "./sessions/kuzo.js";
 import { sessions as LaEscupidera } from "./sessions/la-escupidera.js";
 import { sessions as LCDA } from "./sessions/lcda.js";
+import { sessions as LaReinaCorrupta } from "./sessions/la-reina-corrupta.js";
 
 export const games = [{
+    title: "La Reina Corrupta",
+    tag: "la-reina-corrupta",
+    startDate: "2026",
+    endDate: "Actualidad",
+    order: 1,
+    summary: "Pequeño oneshot para probar el sistema de DaggerHeart.",
+    tags: ["GM", "DaggerHeart"],
+    sessions: LaReinaCorrupta
+},
+{
     title: "Los Cazadores de Aurovita",
     tag: "lcda",
     startDate: "2025",
