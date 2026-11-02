@@ -4,18 +4,18 @@ import { sessions as Kuzo } from "./sessions/kuzo.js";
 import { sessions as LaEscupidera } from "./sessions/la-escupidera.js";
 import { sessions as LCDA } from "./sessions/lcda.js";
 import { sessions as LaReinaCorrupta } from "./sessions/la-reina-corrupta.js";
-import { sessions as LaMaldicionDeDavyJones } from "./sessions/la-maldicion-de-davy-jones.js";
+import { sessions as LaUltimaHistoriaPirata } from "./sessions/la-ultima-historia-pirata.js";
 
 export const games = [
     {
-        title: "La Maldición de Davy Jones",
-        tag: "la-maldicion-de-davy-jones",
+        title: "La Última Historia Pirata",
+        tag: "la-ultima-historia-pirata",
         startDate: "2026",
         endDate: "Actualidad",
         order: 1,
         summary: "Oneshot de terror para Halloween 2026",
         tags: ["GM", "Halloween"],
-        sessions: LaMaldicionDeDavyJones
+        sessions: LaUltimaHistoriaPirata
     },
     {
         title: "La Reina Corrupta",
