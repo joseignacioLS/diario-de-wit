@@ -75,7 +75,7 @@ const renderDiaryEntries = (sessions, diary) => {
     let currentArc = 0;
 
     const checkArc = (sessionArc) => {
-        if (sessionArc > currentArc) {
+        if (sessionArc !== currentArc) {
             currentArc = sessionArc;
             const arcElement = createElement("h3", {
                 textContent: `Arco ${currentArc}`
@@ -92,6 +92,9 @@ const renderDiaryEntries = (sessions, diary) => {
         }));
     }
     sessionsToRender
+        .toSorted((a, b) => {
+            return a.arc ?? 0 < b.arc ?? 0 ? 1 : -1
+        })
         .forEach(session => {
             checkArc(session.arc ?? 1);
             sessionsElement.appendChild(generateSessionArticle(session, diary));
