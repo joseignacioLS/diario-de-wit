@@ -4,7 +4,7 @@ export const sessions = [
      {
         arc: 2,
         session: 61,
-        title: "Adiós Itri",
+        title: "Ruinas a las afueras de Lesterni",
         body: [{
             type: "img",
             src: [
