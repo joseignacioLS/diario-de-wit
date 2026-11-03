@@ -13,30 +13,62 @@ export const sessions = [
       alt: "Poster del evento de Halloween 2026. Ilustración digital de una calavera sobre un montón de monedas",
       caption: undefined
     }]
-  }, {
+  },
+  {
     arc: 1,
     session: 2,
-    title: "Algunos Assets",
+    title: "Preparacion",
     body: [
       {
         type: "img",
         src: [
-          { src: "@/assets/imgs/la-ultima-historia-pirata/skull-256.webp", media: `(width <= 256px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/skull-512.webp", media: `(width <= 512px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/skull.webp", media: `(width > 512px)`, default: true },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page1-256.webp", media: `(width <= 256px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page1-512.webp", media: `(width <= 512px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page1.webp", media: `(width > 512px)`, default: true },
         ],
-        alt: "Poster del evento de Halloween 2026. Ilustración digital de una calavera sobre un montón de monedas",
+        alt: "Primera página de la preparación",
         caption: undefined
-      }, {
+      },
+      {
         type: "img",
         src: [
-          { src: "@/assets/imgs/la-ultima-historia-pirata/mermaid-256.webp", media: `(width <= 256px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/mermaid-512.webp", media: `(width <= 512px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/mermaid.webp", media: `(width > 512px)`, default: true },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page2-256.webp", media: `(width <= 256px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page2-512.webp", media: `(width <= 512px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page2.webp", media: `(width > 512px)`, default: true },
         ],
-        alt: "Poster del evento de Halloween 2026. Ilustración digital de una calavera sobre un montón de monedas",
+        alt: "Segunda página de la preparación",
         caption: undefined
-      }
+      },
+      {
+        type: "img",
+        src: [
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page3-256.webp", media: `(width <= 256px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page3-512.webp", media: `(width <= 512px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page3.webp", media: `(width > 512px)`, default: true },
+        ],
+        alt: "Tercera página de la preparación",
+        caption: undefined
+      },
+      {
+        type: "img",
+        src: [
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page4-256.webp", media: `(width <= 256px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page4-512.webp", media: `(width <= 512px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page4.webp", media: `(width > 512px)`, default: true },
+        ],
+        alt: "Cuarta página de la preparación",
+        caption: undefined
+      },
+      {
+        type: "img",
+        src: [
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page5-256.webp", media: `(width <= 256px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page5-512.webp", media: `(width <= 512px)` },
+          { src: "@/assets/imgs/la-ultima-historia-pirata/page5.webp", media: `(width > 512px)`, default: true },
+        ],
+        alt: "Quinta página de la preparación",
+        caption: undefined
+      },
     ]
   },
   {
