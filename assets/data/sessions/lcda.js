@@ -1,6 +1,21 @@
 const imgFolder = "@/assets/imgs/lcda/";
 
 export const sessions = [
+     {
+        arc: 2,
+        session: 61,
+        title: "Adiós Itri",
+        body: [{
+            type: "img",
+            src: [
+                { src: `${imgFolder}RuinasDeLesterni-256.webp`, media: `(width <= 256px)` },
+                { src: `${imgFolder}RuinasDeLesterni-512.webp`, media: `(width <= 512px)` },
+                { src: `${imgFolder}RuinasDeLesterni.webp`, media: `(width > 512px)`, default: true }
+            ],
+            alt: "Dibujo del mapa de combate de las ruinas fuera de Lesterni",
+            caption: undefined
+        }]
+    },
     {
         arc: 2,
         session: 59,
