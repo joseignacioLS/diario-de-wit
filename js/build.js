@@ -6,9 +6,9 @@ const directory = "./games";
 
 async function main() {
 
-  console.log("Clear games directory");
-  await fs.rm(directory, { recursive: true, force: true });
-  await fs.mkdir(directory, { recursive: true });
+  // console.log("Clear games directory");
+  // await fs.rm(directory, { recursive: true, force: true });
+  // await fs.mkdir(directory, { recursive: true });
 
   console.log("Create games");
   const pageTemplate = await fs.readFile("./assets/diaryTemplate.html", "utf-8");
