@@ -1,3 +1,7 @@
+import { generateImgSources } from "../../../js/utils.js";
+
+const imgFolder = "@/assets/imgs/el-truhan-errante/";
+
 export const sessions = [
     {
         arc: 1,
@@ -5,11 +9,7 @@ export const sessions = [
         title: "De vuelta a la termita",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion01-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion01-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion01.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion01", [256, 512], imgFolder),
             alt: "Fotografía de la primera página del diario del Truhan Errante",
             caption: undefined
         }]
@@ -20,11 +20,7 @@ export const sessions = [
         title: "Rubén Hernández, empresario",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion02-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion02-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion02.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion02", [256, 512], imgFolder),
             alt: "Fotografía de la segunda página del diario del Truhan Errante",
             caption: undefined
         }]
@@ -35,11 +31,7 @@ export const sessions = [
         title: "A su servicio, Herrete",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion03-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion03-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion03.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion03", [256, 512], imgFolder),
             alt: "Fotografía de la tercera página del diario del Truhan Errante",
             caption: undefined
         }]
@@ -50,11 +42,7 @@ export const sessions = [
         title: "¿Rubén o Javier?",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion04-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion04-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion04.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion04", [256, 512], imgFolder),
             alt: "Fotografía de la cuarta página del diario del Truhan Errante",
             caption: undefined
         }]
@@ -65,11 +53,7 @@ export const sessions = [
         title: "¡Javier!",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion05-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion05-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion05.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion05", [256, 512], imgFolder),
             alt: "Fotografía de la quinta página del diario del Truhan Errante",
             caption: undefined
         }]
@@ -80,11 +64,7 @@ export const sessions = [
         title: "Gallardo, (asistente del) Rey de los Corsarios",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion06-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion06-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion06.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion06", [256, 512], imgFolder),
             alt: "Fotografía de la sexta página del diario del Truhan Errante",
             caption: undefined
         }]
@@ -95,11 +75,7 @@ export const sessions = [
         title: "Oh mi capitán",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion07-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion07-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion07.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion07", [256, 512], imgFolder),
             alt: "Fotografía de la séptima página del diario del Truhan Errante",
             caption: undefined
         }]
@@ -119,11 +95,7 @@ export const sessions = [
         title: "El plan",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion09-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion09-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion09.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion09", [256, 512], imgFolder),
             alt: "Fotografía de la novena página del diario del Truhan Errante",
             caption: undefined
         }]
@@ -134,11 +106,7 @@ export const sessions = [
         title: "Peleas clandestinas aprobadas por el gobierno",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion10-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion10-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion10.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion10", [256, 512], imgFolder),
             alt: "Fotografía de la décima página del diario del Truhan Errante",
             caption: undefined
         }]
@@ -149,11 +117,7 @@ export const sessions = [
         title: "El Rompeolas",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/el-truhan-errante/Sesion11-256.webp", media: `(width <= 256px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion11-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/el-truhan-errante/Sesion11.webp", media: `(width > 512px)`, default: true }
-            ],
+            src: generateImgSources("Sesion11", [256, 512], imgFolder),
             alt: "Fotografía de la décimo primera página del diario del Truhan Errante",
             caption: undefined
         }]

@@ -1,3 +1,7 @@
+import { generateImgSources } from "../../../js/utils.js";
+
+const imgFolder = "@/assets/imgs/la-ultima-historia-pirata/";
+
 export const sessions = [
   {
     arc: 1,
@@ -5,11 +9,7 @@ export const sessions = [
     title: "Cartel de la partida",
     body: [{
       type: "img",
-      src: [
-        { src: "@/assets/imgs/la-ultima-historia-pirata/poster-256.webp", media: `(width <= 256px)` },
-        { src: "@/assets/imgs/la-ultima-historia-pirata/poster-512.webp", media: `(width <= 512px)` },
-        { src: "@/assets/imgs/la-ultima-historia-pirata/poster.webp", media: `(width > 512px)`, default: true },
-      ],
+      src: generateImgSources("poster", [256, 512], imgFolder),
       alt: "Poster del evento de Halloween 2026. Ilustración digital de una calavera sobre un montón de monedas",
       caption: undefined
     }]
@@ -21,51 +21,31 @@ export const sessions = [
     body: [
       {
         type: "img",
-        src: [
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page1-256.webp", media: `(width <= 256px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page1-512.webp", media: `(width <= 512px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page1.webp", media: `(width > 512px)`, default: true },
-        ],
+        src: generateImgSources("page1", [256, 512], imgFolder),
         alt: "Primera página de la preparación",
         caption: undefined
       },
       {
         type: "img",
-        src: [
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page2-256.webp", media: `(width <= 256px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page2-512.webp", media: `(width <= 512px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page2.webp", media: `(width > 512px)`, default: true },
-        ],
+        src: generateImgSources("page2", [256, 512], imgFolder),
         alt: "Segunda página de la preparación",
         caption: undefined
       },
       {
         type: "img",
-        src: [
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page3-256.webp", media: `(width <= 256px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page3-512.webp", media: `(width <= 512px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page3.webp", media: `(width > 512px)`, default: true },
-        ],
+        src: generateImgSources("page3", [256, 512], imgFolder),
         alt: "Tercera página de la preparación",
         caption: undefined
       },
       {
         type: "img",
-        src: [
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page4-256.webp", media: `(width <= 256px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page4-512.webp", media: `(width <= 512px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page4.webp", media: `(width > 512px)`, default: true },
-        ],
+        src: generateImgSources("page4", [256, 512], imgFolder),
         alt: "Cuarta página de la preparación",
         caption: undefined
       },
       {
         type: "img",
-        src: [
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page5-256.webp", media: `(width <= 256px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page5-512.webp", media: `(width <= 512px)` },
-          { src: "@/assets/imgs/la-ultima-historia-pirata/page5.webp", media: `(width > 512px)`, default: true },
-        ],
+        src: generateImgSources("page5", [256, 512], imgFolder),
         alt: "Quinta página de la preparación",
         caption: undefined
       },

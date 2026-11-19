@@ -1,3 +1,7 @@
+import { generateImgSources } from "../../../js/utils.js";
+
+const imgFolder = "@/assets/imgs/la-reina-corrupta/";
+
 export const sessions = [
     {
         arc: 1,
@@ -5,11 +9,7 @@ export const sessions = [
         title: "El Mapa de Valleverde",
         body: [{
             type: "img",
-            src: [
-                { src: "@/assets/imgs/la-reina-corrupta/mapa-512.webp", media: `(width <= 512px)` },
-                { src: "@/assets/imgs/la-reina-corrupta/mapa-1024.webp", media: `(width <= 1024px)` },
-                { src: "@/assets/imgs/la-reina-corrupta/mapa.webp", media: `(width > 1024px)`, default: true },
-            ],
+            src: generateImgSources("mapa", [512, 1024], imgFolder),
             alt: "Fotografía del mapa de Valleverde",
             caption: undefined
         }]
