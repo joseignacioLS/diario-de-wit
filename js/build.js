@@ -1,36 +1,10 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { games } from "../assets/data/games.js";
-import { generateGameDate } from "./render.js";
+import { games } from "../games/games.js";
 
 const directory = "./games";
 
 async function main() {
-  console.log("Add games to home");
-
-  const home = await fs.readFile("./index.html", "utf-8");
-  // const cleanPage = home.replace(
-  //   /<ul id="games-list">[\s\S]*?<\/ul>/,
-  //   `<ul id="games-list">
-  //     ${games
-  //       .map((game) => {
-  //         const gameDate = generateGameDate(game.startDate, game.endDate);
-  //         return `
-  //         <li>
-  //           <a
-  //             href="/games/${game.tag}"
-  //             class="interactive-card"
-  //             aria-disabled="${game.tag === undefined}"
-  //           >
-  //             ${game.title} ${gameDate ? `(${gameDate})` : ""}
-  //           </a>
-  //         </li>`;
-  //       })
-  //       .join("\n")}
-  //   </ul>`
-  // );
-
-  // await fs.writeFile("./index.html", cleanPage);
 
   console.log("Clear games directory");
   await fs.rm(directory, { recursive: true, force: true });

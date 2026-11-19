@@ -1,10 +1,10 @@
-import { sessions as ElDiarioDeWit } from "./sessions/el-diario-de-wit.js";
-import { sessions as ElTruhanErrante } from "./sessions/el-truhan-errante.js";
-import { sessions as Kuzo } from "./sessions/kuzo.js";
-import { sessions as LaEscupidera } from "./sessions/la-escupidera.js";
-import { sessions as LCDA } from "./sessions/lcda.js";
-import { sessions as LaReinaCorrupta } from "./sessions/la-reina-corrupta.js";
-import { sessions as LaUltimaHistoriaPirata } from "./sessions/la-ultima-historia-pirata.js";
+import { sessions as ElDiarioDeWit } from "./el-diario-de-wit/el-diario-de-wit.js";
+import { sessions as ElTruhanErrante } from "./el-truhan-errante/el-truhan-errante.js";
+import { sessions as Kuzo } from "./kuzo/kuzo.js";
+import { sessions as LaEscupidera } from "./la-escupidera/la-escupidera.js";
+import { sessions as LCDA } from "./lcda/lcda.js";
+import { sessions as LaReinaCorrupta } from "./la-reina-corrupta/la-reina-corrupta.js";
+import { sessions as LaUltimaHistoriaPirata } from "./la-ultima-historia-pirata/la-ultima-historia-pirata.js";
 
 export const games = [
     {

@@ -1,6 +1,6 @@
 import { sortSessions } from "./utils.js";
 import { createElement, createImage } from "./dom.js";
-import { games } from "../assets/data/games.js";
+import { games } from "../games/games.js";
 
 
 export const generateGameDate = (startDate, endDate) => {

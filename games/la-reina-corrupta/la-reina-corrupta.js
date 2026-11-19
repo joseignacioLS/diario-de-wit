@@ -1,4 +1,4 @@
-import { generateImgSources } from "../../../js/utils.js";
+import { generateImgSources } from "../../js/utils.js";
 
 const imgFolder = "@/assets/imgs/la-reina-corrupta/";
 
